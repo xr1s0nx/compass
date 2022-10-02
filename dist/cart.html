@@ -1,0 +1,1382 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+         href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,600&display=swap&_v=20220912000016"
+         rel="stylesheet"
+      />
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css?_v=20220912000016" />
+      <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css?_v=20220912000016" />
+      <link rel="stylesheet" href="css/style.min.css?_v=20220912000016" />
+      <title>Компасс</title>
+   </head>
+   <body>
+      <div class="modal fade" id="exampleModalLabelTel" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelTel" aria-hidden="true">
+   <div class="modal-dialog" role="document">
+      <div class="modal-content">
+         <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel" style="font-size: 20px;">Заказать звонок</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+               <span aria-hidden="true" style="color: red">&times;</span>
+            </button>
+         </div>
+         <div class="modal-body">
+            <form action="#" class="registration-form">
+               <div class="input-block">
+                  <p class="block-text">Имя <span>*</span></p>
+                  <input type="text" class="input" />
+               </div>
+               <div class="input-block">
+                  <p class="block-text">Мобильный телефон <span>*</span></p>
+                  <input type="tel" class="input" />
+               </div>
+            </form>
+         </div>
+         <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Отправить</button>
+         </div>
+      </div>
+   </div>
+</div>
+ <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+   <div class="modal-dialog" role="document">
+      <div class="modal-content">
+         <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Регистрация</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+               <span aria-hidden="true" style="color: red">&times;</span>
+            </button>
+         </div>
+         <div class="modal-body">
+            <form action="#" class="registration-form">
+               <div class="input-block">
+                  <p class="block-text">Имя <span>*</span></p>
+                  <input type="text" class="input" />
+               </div>
+               <div class="input-block">
+                  <p class="block-text">Мобильный телефон <span>*</span></p>
+                  <input type="tel" class="input" />
+               </div>
+               <div class="input-block">
+                  <p class="block-text">Имя <span>*</span></p>
+                  <input type="text" class="input" />
+               </div>
+               <div class="input-block">
+                  <p class="block-text">Email <span>*</span></p>
+                  <input type="email" class="input" />
+               </div>
+               <div class="input-block">
+                  <p class="block-text">Пароль <span>*</span></p>
+                  <input type="password" class="input password-inp" />
+                  <a href="#" class="look-hide__password d-flex justify-content-end">Показать пароль</a>
+               </div>
+               <div class="input-block">
+                  <p class="block-text">Адрес доставки</p>
+                  <textarea class="adress__area" placeholder="г. Москва, ул. Гончарный пер. дом 16 кв 26 3й этаж, домофон 0000"></textarea>
+               </div>
+               <div class="cap-block">
+                  <p class="block-text">Пароль <span>*</span></p>
+                  <div class="d-flex justify-content-between align-items-center capt-block">
+                     <img src="img/capt-img.jpg" alt="" />
+                     <div class="d-flex align-items-center">
+                        <a href="#" class="reload-btn">
+                           <img src="img/reload-icon.svg" alt="" class="reload-img" />
+                        </a>
+                        <input type="text" class="capt-input">
+                     </div>
+                  </div>
+               </div>
+            </form>
+         </div>
+         <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Отправить</button>
+            <button type="button" class="btn btn-primary">Сбросить</button>
+         </div>
+         <div class="modal-sign">
+            <p>У меня есть регистрация: <a href="#">Войти</a></p>
+         </div>
+      </div>
+   </div>
+</div>
+
+      <header class="header"><div class="header__top">
+   <div class="container">
+      <div class="row justify-content-between align-items-center">
+         <a href="index.html" class="header__logo col-md-4">
+            <img src="img/logo.svg" alt="" />
+         </a>
+         <div class="header__top-nav col-md-12 d-flex align-items-center justify-content-between">
+            <div class="d-flex header__top-workTime align-items-center">
+               <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="#00a752"
+                  class="bi bi-clock"
+                  viewBox="0 0 16 16"
+                  style="margin-right: 10px"
+               >
+                  <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z" />
+                  <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z" />
+               </svg>
+               <div class="workTime__text">
+                  <p>График работы:</p>
+                  <p>С 9.00-21.00 Пн-Вск</p>
+               </div>
+            </div>
+            <a href="#" class="d-flex header__top-location align-items-center">
+               <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="#00a752"
+                  class="bi bi-geo-alt"
+                  viewBox="0 0 16 16"
+                  style="margin-right: 10px"
+               >
+                  <path
+                     d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"
+                  />
+                  <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+               </svg>
+               <p class="location__text">Адреса</p>
+            </a>
+            <div class="d-flex header__top-phones align-items-center">
+               <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="#00a752"
+                  class="bi bi-telephone"
+                  viewBox="0 0 16 16"
+                  style="margin-right: 10px"
+               >
+                  <path
+                     d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"
+                  />
+               </svg>
+               <div class="phone__text">
+                  <a class="phone__text-link" href="tel:7 (495) 477-81-90">7 (495) 477-81-90</a>
+                  <a class="phone__text-link" href="tel:7 (800) 333-45-17">7 (800) 333-45-17</a>
+               </div>
+            </div>
+            <div class="d-flex header__top-lk align-items-center">
+               <a href="#" class="lk__btn">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#00a752" class="bi bi-cart2" viewBox="0 0 16 16">
+                     <path
+                        d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"
+                     />
+                  </svg>
+                  <div class="lk__btn-count">
+                     <p>0</p>
+                  </div>
+               </a>
+               <a href="#" class="lk__btn fav-btn d-flex align-item-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#00a752" class="bi bi-heart" viewBox="0 0 16 16">
+                     <path
+                        d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"
+                     />
+                  </svg>
+                  <div class="lk__btn-count">
+                     <p>0</p>
+                  </div>
+               </a>
+            </div>
+            <div class="d-flex header__top-signBtns align-items-center">
+               <a href="#" class="d-flex align-items-center signBtns__btn">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#00a752" class="bi bi-lock" viewBox="0 0 16 16">
+                     <path
+                        d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2zM5 8h6a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1z"
+                     />
+                  </svg>
+                  <p class="signBtns__btn-text">Вход</p>
+               </a>
+               <a data-toggle="modal" data-target="#exampleModal" href="#" class="reg-btn d-flex align-items-center signBtns__btn">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#00a752" class="bi bi-person" viewBox="0 0 16 16">
+                     <path
+                        d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"
+                     />
+                  </svg>
+                  <p class="signBtns__btn-text">Регистрация</p>
+               </a>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+<div class="header__nav">
+   <div class="container">
+      <div class="row justify-content-between">
+         <nav class="d-flex align-items-center justify-content-between col-md-13">
+            <a href="#" class="header__nav-item">Акция</a>
+            <a href="#" class="header__nav-item">Доставка</a>
+            <a href="#" class="header__nav-item">Оплата</a>
+            <a href="#" class="header__nav-item">О компании</a>
+            <a href="#" class="header__nav-item">Отзывы</a>
+            <a href="#" class="header__nav-item">Новости</a>
+            <a href="#" class="header__nav-item">Контакты</a>
+            <div class="dropdown">
+               <a
+                  class="dropdown-toggle header__nav-item"
+                  href="#"
+                  role="button"
+                  id="dropdownMenuLink"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+               >
+                  Мебельные фабрики
+               </a>
+
+               <div class="dropdown-menu submenu" aria-labelledby="dropdownMenuLink">
+                  <ul>
+                     <li><a href="/brang/103-aletan">Aletan</a></li>
+                     <li><a href="/brang/307-ama-light-technologies">AMA Light Technologies</a></li>
+                     <li><a href="/brang/137-dreamline">DreamLine</a></li>
+                  </ul>
+                  <ul>
+                     <li><a href="/brang/364-eco-bliss">Eco bliss</a></li>
+                     <li><a href="/brang/380-hoogar">Hoogar</a></li>
+                     <li><a href="/brang/243-sanremi">SanRemi</a></li>
+                     <li><a href="/brang/332-szynaka">Szynaka</a></li>
+                  </ul>
+                  <ul>
+                     <li><a href="/brang/153-taranko">Taranko</a></li>
+                     <li><a href="/brang/148-vox">Vox</a></li>
+                     <li><a href="/brang/174-aktualnyj-dizajn">Актуальный дизайн</a></li>
+                     <li><a href="/brang/105-bellona">Беллона мебель (Bellona)</a></li>
+                  </ul>
+                  <ul>
+                     <li><a href="/brang/178-dia-mebel">ДИА мебель</a></li>
+                     <li><a href="/brang/188-kompas-mebel">Компас мебель</a></li>
+                     <li><a href="/brang/337-mebel-bratev-bazhenovyh">Мебель Братьев Баженовых</a></li>
+                     <li><a href="/brang/222-mebel-grad">Мебель Град</a></li>
+                  </ul>
+                  <ul>
+                     <li><a href="/brang/292-mebel-moskva">Мебель Москва</a></li>
+                     <li><a href="/brang/201-mebel-neman">Мебель-Неман</a></li>
+                     <li><a href="/brang/241-metalldizajn">Металлдизайн</a></li>
+                     <li><a href="/brang/264-arcevo-mebel">Ярцево мебель</a></li>
+                  </ul>
+               </div>
+            </div>
+         </nav>
+         <a href="#" class="sale-btn col-md-2">Скидки</a>
+      </div>
+      <div class="justify-content-between align-items-center mob-header">
+         <button class="mob-menuBtn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#fff" class="bi bi-list" viewBox="0 0 16 16" style="width: 30px; height: 30px;">
+               <path
+                  fill-rule="evenodd"
+                  d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"
+               />
+            </svg>
+         </button>
+         <div class="hamburger-menu">
+            <div class="close-bg"></div>
+            <div class="content">
+               <a href="#" class="nav-item d-block">Акция</a>
+               <a href="#" class="nav-item d-block">Доставка</a>
+               <a href="#" class="nav-item d-block">Оплата</a>
+               <a href="#" class="nav-item d-block">О компании</a>
+               <a href="#" class="nav-item d-block">Отзывы</a>
+               <a href="#" class="nav-item d-block">Новости</a>
+               <a href="#" class="nav-item d-block">Контакты</a>
+               <div class="">
+                  <button
+                     class="nav-item coll d-block"
+                     type="button"
+                     data-toggle="collapse"
+                     data-target="#collapseOnee"
+                     aria-expanded="true"
+                     aria-controls="collapseOnee"
+                  >
+                     Мебельные фабрики
+                  </button>
+                  <div id="collapseOnee" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                     <div class="card-body" style="padding: 0">
+                        <a href="#" class="col-link d-block">Мебельные фабрики</a>
+                        <a href="#" class="col-link d-block">Мебельные фабрики</a>
+                        <a href="#" class="col-link d-block">Мебельные фабрики</a>
+                        <a href="#" class="col-link d-block">Мебельные фабрики</a>
+                        <a href="#" class="col-link d-block">Мебельные фабрики</a>
+                        <a href="#" class="col-link d-block">Мебельные фабрики</a>
+                        <a href="#" class="col-link d-block">Мебельные фабрики</a>
+                        <a href="#" class="col-link d-block">Мебельные фабрики</a>
+                        <a href="#" class="col-link d-block">Мебельные фабрики</a>
+                        <a href="#" class="col-link d-block">Мебельные фабрики</a>
+                        <a href="#" class="col-link d-block">Мебельные фабрики</a>
+                        <a href="#" class="col-link d-block">Мебельные фабрики</a>
+                        <a href="#" class="col-link d-block">Мебельные фабрики</a>
+                        <a href="#" class="col-link d-block">Мебельные фабрики</a>
+                        <a href="#" class="col-link d-block">Мебельные фабрики</a>
+                     </div>
+                  </div>
+               </div>
+               <button class="btn sale-btn">СКИДКИ</button>
+               <div class="footerMobMenu">
+                  <div class="worktime d-flex align-items-center">
+                     <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="#fff"
+                        class="bi bi-clock"
+                        viewBox="0 0 16 16"
+                        style="margin-right: 10px"
+                     >
+                        <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"></path>
+                        <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"></path>
+                     </svg>
+                     <div class="info">
+                        <p>График работы:</p>
+                        <p>С 9.00-21.00 Пн-Вск</p>
+                     </div>
+                  </div>
+                  <div class="location d-flex align-items-center">
+                     <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="#fff"
+                        class="bi bi-geo-alt"
+                        viewBox="0 0 16 16"
+                        style="margin-right: 10px"
+                     >
+                        <path
+                           d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"
+                        ></path>
+                        <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"></path>
+                     </svg>
+                     <div class="info">
+                        <p>Адреса</p>
+                     </div>
+                  </div>
+                  <div class="signBtns d-flex align-items-center">
+                     <a href="#" class="d-flex align-items-center signBtns__btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#fff" class="bi bi-lock" viewBox="0 0 16 16">
+                           <path
+                              d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2zM5 8h6a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1z"
+                           ></path>
+                        </svg>
+                        <p class="signBtns__btn-text">Вход</p>
+                     </a>
+                     <a data-toggle="modal" data-target="#exampleModal" href="#" class="reg-btn d-flex align-items-center signBtns__btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#fff" class="bi bi-person" viewBox="0 0 16 16">
+                           <path
+                              d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"
+                           ></path>
+                        </svg>
+                        <p class="signBtns__btn-text">Регистрация</p>
+                     </a>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="d-flex align-items-center right-side">
+            <button class="openSearch">
+               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#fff" class="bi bi-search" viewBox="0 0 16 16">
+                  <path
+                     d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
+                  />
+               </svg>
+            </button>
+            <a href="#" class="lk__btn">
+               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#fff" class="bi bi-cart2" viewBox="0 0 16 16">
+                  <path
+                     d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"
+                  />
+               </svg>
+               <div class="lk__btn-count">
+                  <p>0</p>
+               </div>
+            </a>
+            <a href="#" class="lk__btn fav-btn d-flex align-item-center">
+               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#fff" class="bi bi-heart" viewBox="0 0 16 16">
+                  <path
+                     d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"
+                  />
+               </svg>
+               <div class="lk__btn-count">
+                  <p>0</p>
+               </div>
+            </a>
+         </div>
+      </div>
+   </div>
+</div>
+</header>
+      <main class="main" style="margin-top: 30px">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-3"><div class="main__nav" id="accordion">
+   <div class="main__nav__block">
+      <div class="main__nav__block-title">
+         <p class="block-title__text">Интерьерные решения</p>
+      </div>
+      <div class="nav__item">
+         <a href="#" class="nav__item-link">Кабинеты</a>
+      </div>
+      <div class="nav__item">
+         <div class="nav__item-header" id="headingOne">
+            <button class="main__nav__block-item collapsed"" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+               Гостинные
+            </button>
+         </div>
+
+         <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+            <div class="nav__item-body">
+               <a href="#" class="body__link">Белая мебель для гостиной</a>
+               <a href="#" class="body__link">Классическая мебель для гостиной</a>
+               <a href="#" class="body__link">Черная мебель для гостиной</a>
+               <a href="#" class="body__link">Гостиные Прованс</a>
+               <a href="#" class="body__link">Гостиные из массива</a>
+               <a href="#" class="body__link">Венге мебель для гостиной</a>
+               <a href="#" class="body__link">Мини стенки</a>
+               <a href="#" class="body__link">Недорогие гостинные</a>
+            </div>
+         </div>
+      </div>
+      <div class="nav__item">
+         <a href="#" class="nav__item-link">Детские</a>
+      </div>
+      <div class="nav__item">
+         <a href="#" class="nav__item-link">Мебель из массива</a>
+      </div>
+      <div class="nav__item">
+         <div class="nav__item-header" id="headingOne">
+            <button class="main__nav__block-item collapsed black" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+               Мягкая мебель
+            </button>
+         </div>
+
+         <div id="collapseTwo" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+            <div class="nav__item-body">
+               <a href="#" class="body__link">Белая мебель для гостиной</a>
+               <a href="#" class="body__link">Классическая мебель для гостиной</a>
+               <a href="#" class="body__link">Черная мебель для гостиной</a>
+               <a href="#" class="body__link">Гостиные Прованс</a>
+               <a href="#" class="body__link">Гостиные из массива</a>
+               <a href="#" class="body__link">Венге мебель для гостиной</a>
+               <a href="#" class="body__link">Мини стенки</a>
+               <a href="#" class="body__link">Недорогие гостинные</a>
+            </div>
+         </div>
+      </div>
+      <div class="nav__item">
+         <a href="#" class="nav__item-link">Прихожие</a>
+      </div>
+      <div class="nav__item">
+         <div class="nav__item-header" id="headingOne">
+            <button
+               class="main__nav__block-item collapsed""
+               data-toggle="collapse"
+               data-target="#collapseThree"
+               aria-expanded="true"
+               aria-controls="collapseThree"
+            >
+               Спальни
+            </button>
+         </div>
+
+         <div id="collapseThree" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+            <div class="nav__item-body">
+               <a href="#" class="body__link">Белая мебель для гостиной</a>
+               <a href="#" class="body__link">Классическая мебель для гостиной</a>
+               <a href="#" class="body__link">Черная мебель для гостиной</a>
+               <a href="#" class="body__link">Гостиные Прованс</a>
+               <a href="#" class="body__link">Гостиные из массива</a>
+               <a href="#" class="body__link">Венге мебель для гостиной</a>
+               <a href="#" class="body__link">Мини стенки</a>
+               <a href="#" class="body__link">Недорогие гостинные</a>
+            </div>
+         </div>
+      </div>
+      <div class="nav__item">
+         <a href="#" class="nav__item-link"> Обеденные комплекты</a>
+      </div>
+   </div>
+   <div class="main__nav__block">
+      <div class="main__nav__block-title">
+         <p class="block-title__text">Предметы интерьера</p>
+      </div>
+      <div class="nav__item">
+         <div class="nav__item-header" id="headingOne">
+            <button
+               class="main__nav__block-item collapsed""
+               data-toggle="collapse"
+               data-target="#collapseFour"
+               aria-expanded="true"
+               aria-controls="collapseFour"
+            >
+               Матрасы
+            </button>
+         </div>
+
+         <div id="collapseFour" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+            <div class="nav__item-body">
+               <a href="#" class="body__link">Белая мебель для гостиной</a>
+               <a href="#" class="body__link">Классическая мебель для гостиной</a>
+               <a href="#" class="body__link">Черная мебель для гостиной</a>
+               <a href="#" class="body__link">Гостиные Прованс</a>
+               <a href="#" class="body__link">Гостиные из массива</a>
+               <a href="#" class="body__link">Венге мебель для гостиной</a>
+               <a href="#" class="body__link">Мини стенки</a>
+               <a href="#" class="body__link">Недорогие гостинные</a>
+            </div>
+         </div>
+      </div>
+      <div class="nav__item">
+         <a href="#" class="nav__item-link">Банкетки, пуфы</a>
+      </div>
+
+      <div class="nav__item">
+         <div class="nav__item-header" id="headingOne">
+            <button
+               class="main__nav__block-item collapsed""
+               data-toggle="collapse"
+               data-target="#collapseFive"
+               aria-expanded="true"
+               aria-controls="collapseFive"
+            >
+               Витрины
+            </button>
+         </div>
+
+         <div id="collapseFive" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+            <div class="nav__item-body">
+               <a href="#" class="body__link">Белая мебель для гостиной</a>
+               <a href="#" class="body__link">Классическая мебель для гостиной</a>
+               <a href="#" class="body__link">Черная мебель для гостиной</a>
+               <a href="#" class="body__link">Гостиные Прованс</a>
+               <a href="#" class="body__link">Гостиные из массива</a>
+               <a href="#" class="body__link">Венге мебель для гостиной</a>
+               <a href="#" class="body__link">Мини стенки</a>
+               <a href="#" class="body__link">Недорогие гостинные</a>
+            </div>
+         </div>
+      </div>
+      <div class="nav__item">
+         <a href="#" class="nav__item-link">Зеркала</a>
+      </div>
+      <div class="nav__item">
+         <div class="nav__item-header" id="headingOne">
+            <button class="main__nav__block-item collapsed"" data-toggle="collapse" data-target="#collapseSix" aria-expanded="true" aria-controls="collapseSix">
+               Комоды
+            </button>
+         </div>
+
+         <div id="collapseSix" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+            <div class="nav__item-body">
+               <a href="#" class="body__link">Белая мебель для гостиной</a>
+               <a href="#" class="body__link">Классическая мебель для гостиной</a>
+               <a href="#" class="body__link">Черная мебель для гостиной</a>
+               <a href="#" class="body__link">Гостиные Прованс</a>
+               <a href="#" class="body__link">Гостиные из массива</a>
+               <a href="#" class="body__link">Венге мебель для гостиной</a>
+               <a href="#" class="body__link">Мини стенки</a>
+               <a href="#" class="body__link">Недорогие гостинные</a>
+            </div>
+         </div>
+      </div>
+      <div class="nav__item">
+         <a href="#" class="nav__item-link"> Консоли</a>
+      </div>
+      <div class="nav__item">
+         <div class="nav__item-header" id="headingOne">
+            <button
+               class="main__nav__block-item collapsed""
+               data-toggle="collapse"
+               data-target="#collapseSeven"
+               aria-expanded="true"
+               aria-controls="collapseSeven"
+            >
+               Кровати
+            </button>
+         </div>
+
+         <div id="collapseSeven" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+            <div class="nav__item-body">
+               <a href="#" class="body__link">Белая мебель для гостиной</a>
+               <a href="#" class="body__link">Классическая мебель для гостиной</a>
+               <a href="#" class="body__link">Черная мебель для гостиной</a>
+               <a href="#" class="body__link">Гостиные Прованс</a>
+               <a href="#" class="body__link">Гостиные из массива</a>
+               <a href="#" class="body__link">Венге мебель для гостиной</a>
+               <a href="#" class="body__link">Мини стенки</a>
+               <a href="#" class="body__link">Недорогие гостинные</a>
+            </div>
+         </div>
+      </div>
+      <div class="nav__item">
+         <a href="#" class="nav__item-link"> Полки</a>
+      </div>
+      <div class="nav__item">
+         <a href="#" class="nav__item-link"> Стеллажи</a>
+      </div>
+      <div class="nav__item">
+         <div class="nav__item-header" id="headingOne">
+            <button
+               class="main__nav__block-item collapsed""
+               data-toggle="collapse"
+               data-target="#collapseEight"
+               aria-expanded="true"
+               aria-controls="collapseEight"
+            >
+               Столы, столы-трансформеры
+            </button>
+         </div>
+
+         <div id="collapseEight" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+            <div class="nav__item-body">
+               <a href="#" class="body__link">Белая мебель для гостиной</a>
+               <a href="#" class="body__link">Классическая мебель для гостиной</a>
+               <a href="#" class="body__link">Черная мебель для гостиной</a>
+               <a href="#" class="body__link">Гостиные Прованс</a>
+               <a href="#" class="body__link">Гостиные из массива</a>
+               <a href="#" class="body__link">Венге мебель для гостиной</a>
+               <a href="#" class="body__link">Мини стенки</a>
+               <a href="#" class="body__link">Недорогие гостинные</a>
+            </div>
+         </div>
+      </div>
+      <div class="nav__item">
+         <a href="#" class="nav__item-link"> Столы журнальные </a>
+      </div>
+      <div class="nav__item">
+         <a href="#" class="nav__item-link"> Столы письменные </a>
+      </div>
+      <div class="nav__item">
+         <a href="#" class="nav__item-link"> Стулья, табуреты </a>
+      </div>
+      <div class="nav__item">
+         <a href="#" class="nav__item-link"> ТВ тумбы, тв стойки </a>
+      </div>
+      <div class="nav__item">
+         <a href="#" class="nav__item-link"> Туалетные столы </a>
+      </div>
+      <div class="nav__item">
+         <a href="#" class="nav__item-link"> Тумбы прикроватные </a>
+      </div>
+      <div class="nav__item">
+         <a href="#" class="nav__item-link"> Тумбы для прихожей </a>
+      </div>
+      <div class="nav__item">
+         <a href="#" class="nav__item-link"> Шкафы </a>
+      </div>
+      <div class="nav__item">
+         <a href="#" class="nav__item-link"> Распродажа выставочных образцов </a>
+      </div>
+      <div class="nav__item">
+         <a href="#" class="nav__item-link"> Польская мебель </a>
+      </div>
+      <div class="nav__item">
+         <a href="#" class="nav__item-link"> Одеяла, подушки </a>
+      </div>
+   </div>
+</div>
+<div class="main__nav mob" id="accordionMainMob">
+   <div class="main__nav__block">
+      <div class="main__nav__block-title">
+         <div class="nav__item title-item" id="headingTitleOne">
+            <button class="main__nav__block-item collapsed"" data-toggle="collapse" data-target="#collapseTitleOne" aria-expanded="true" aria-controls="collapseTitleOne">
+               Гостинные
+            </button>
+         </div>
+      </div>
+      <div id="collapseTitleOne" class="collapse" aria-labelledby="headingTitleOne" data-parent="#accordionMainMob" >
+         <div id="accordionMob">
+            <div class="nav__item">
+               <a href="#" class="nav__item-link">Кабинеты</a>
+            </div>
+            <div class="nav__item">
+               <div class="nav__item-header" id="headingOne">
+                  <button class="main__nav__block-item collapsed"" data-toggle="collapse" data-target="#collapseOneMob" aria-expanded="true" aria-controls="collapseOneMob">
+                     Гостинные
+                  </button>
+               </div>
+      
+               <div id="collapseOneMob" class="collapse" aria-labelledby="headingOne" data-parent="#accordionMob">
+                  <div class="nav__item-body">
+                     <a href="#" class="body__link">Белая мебель для гостиной</a>
+                     <a href="#" class="body__link">Классическая мебель для гостиной</a>
+                     <a href="#" class="body__link">Черная мебель для гостиной</a>
+                     <a href="#" class="body__link">Гостиные Прованс</a>
+                     <a href="#" class="body__link">Гостиные из массива</a>
+                     <a href="#" class="body__link">Венге мебель для гостиной</a>
+                     <a href="#" class="body__link">Мини стенки</a>
+                     <a href="#" class="body__link">Недорогие гостинные</a>
+                  </div>
+               </div>
+            </div>
+            <div class="nav__item">
+               <a href="#" class="nav__item-link">Детские</a>
+            </div>
+            <div class="nav__item">
+               <a href="#" class="nav__item-link">Мебель из массива</a>
+            </div>
+            <div class="nav__item">
+               <div class="nav__item-header" id="headingOne">
+                  <button class="main__nav__block-item collapsed black" data-toggle="collapse" data-target="#collapseTwoMob" aria-expanded="true" aria-controls="collapseTwoMob">
+                     Мягкая мебель
+                  </button>
+               </div>
+      
+               <div id="collapseTwoMob" class="collapse" aria-labelledby="headingOne" data-parent="#accordionMob">
+                  <div class="nav__item-body">
+                     <a href="#" class="body__link">Белая мебель для гостиной</a>
+                     <a href="#" class="body__link">Классическая мебель для гостиной</a>
+                     <a href="#" class="body__link">Черная мебель для гостиной</a>
+                     <a href="#" class="body__link">Гостиные Прованс</a>
+                     <a href="#" class="body__link">Гостиные из массива</a>
+                     <a href="#" class="body__link">Венге мебель для гостиной</a>
+                     <a href="#" class="body__link">Мини стенки</a>
+                     <a href="#" class="body__link">Недорогие гостинные</a>
+                  </div>
+               </div>
+            </div>
+            <div class="nav__item">
+               <a href="#" class="nav__item-link">Прихожие</a>
+            </div>
+            <div class="nav__item">
+               <div class="nav__item-header" id="headingOne">
+                  <button
+                     class="main__nav__block-item collapsed""
+                     data-toggle="collapse"
+                     data-target="#collapseThreeMob"
+                     aria-expanded="true"
+                     aria-controls="collapseThreeMob"
+                  >
+                     Спальни
+                  </button>
+               </div>
+      
+               <div id="collapseThreeMob" class="collapse" aria-labelledby="headingOne" data-parent="#accordionMob">
+                  <div class="nav__item-body">
+                     <a href="#" class="body__link">Белая мебель для гостиной</a>
+                     <a href="#" class="body__link">Классическая мебель для гостиной</a>
+                     <a href="#" class="body__link">Черная мебель для гостиной</a>
+                     <a href="#" class="body__link">Гостиные Прованс</a>
+                     <a href="#" class="body__link">Гостиные из массива</a>
+                     <a href="#" class="body__link">Венге мебель для гостиной</a>
+                     <a href="#" class="body__link">Мини стенки</a>
+                     <a href="#" class="body__link">Недорогие гостинные</a>
+                  </div>
+               </div>
+            </div>
+            <div class="nav__item">
+               <a href="#" class="nav__item-link"> Обеденные комплекты</a>
+            </div>
+         </div>
+         
+      </div>
+
+   </div>
+
+   <div class="main__nav__block">
+      <div class="main__nav__block-title">
+         <div class="nav__item title-item" id="headingTitleTwo">
+            <button class="main__nav__block-item collapsed"" data-toggle="collapse" data-target="#collapseTitleTwo" aria-expanded="true" aria-controls="collapseTitleTwo">
+               Предметы интерьера
+            </button>
+         </div>
+      </div>
+      <div id="collapseTitleTwo" class="collapse" aria-labelledby="headingTitleTwo" data-parent="#accordionMainMob" >
+         <div id="accordionMobTwo">
+            <div class="nav__item">
+               <div class="nav__item-header" id="headingOne">
+                  <button
+                     class="main__nav__block-item collapsed""
+                     data-toggle="collapse"
+                     data-target="#collapseFourMob"
+                     aria-expanded="true"
+                     aria-controls="collapseFourMob"
+                  >
+                     Матрасы
+                  </button>
+               </div>
+      
+               <div id="collapseFourMob" class="collapse" aria-labelledby="headingOne" data-parent="#accordionMobTwo">
+                  <div class="nav__item-body">
+                     <a href="#" class="body__link">Белая мебель для гостиной</a>
+                     <a href="#" class="body__link">Классическая мебель для гостиной</a>
+                     <a href="#" class="body__link">Черная мебель для гостиной</a>
+                     <a href="#" class="body__link">Гостиные Прованс</a>
+                     <a href="#" class="body__link">Гостиные из массива</a>
+                     <a href="#" class="body__link">Венге мебель для гостиной</a>
+                     <a href="#" class="body__link">Мини стенки</a>
+                     <a href="#" class="body__link">Недорогие гостинные</a>
+                  </div>
+               </div>
+            </div>
+            <div class="nav__item">
+               <a href="#" class="nav__item-link">Банкетки, пуфы</a>
+            </div>
+      
+            <div class="nav__item">
+               <div class="nav__item-header" id="headingOne">
+                  <button
+                     class="main__nav__block-item collapsed""
+                     data-toggle="collapse"
+                     data-target="#collapseFiveMob"
+                     aria-expanded="true"
+                     aria-controls="collapseFiveMob"
+                  >
+                     Витрины
+                  </button>
+               </div>
+      
+               <div id="collapseFiveMob" class="collapse" aria-labelledby="headingOne" data-parent="#accordionMobTwo">
+                  <div class="nav__item-body">
+                     <a href="#" class="body__link">Белая мебель для гостиной</a>
+                     <a href="#" class="body__link">Классическая мебель для гостиной</a>
+                     <a href="#" class="body__link">Черная мебель для гостиной</a>
+                     <a href="#" class="body__link">Гостиные Прованс</a>
+                     <a href="#" class="body__link">Гостиные из массива</a>
+                     <a href="#" class="body__link">Венге мебель для гостиной</a>
+                     <a href="#" class="body__link">Мини стенки</a>
+                     <a href="#" class="body__link">Недорогие гостинные</a>
+                  </div>
+               </div>
+            </div>
+            <div class="nav__item">
+               <a href="#" class="nav__item-link">Зеркала</a>
+            </div>
+            <div class="nav__item">
+               <div class="nav__item-header" id="headingOne">
+                  <button class="main__nav__block-item collapsed"" data-toggle="collapse" data-target="#collapseSixMob" aria-expanded="true" aria-controls="collapseSixMob">
+                     Комоды
+                  </button>
+               </div>
+      
+               <div id="collapseSixMob" class="collapse" aria-labelledby="headingOne" data-parent="#accordionMobTwo">
+                  <div class="nav__item-body">
+                     <a href="#" class="body__link">Белая мебель для гостиной</a>
+                     <a href="#" class="body__link">Классическая мебель для гостиной</a>
+                     <a href="#" class="body__link">Черная мебель для гостиной</a>
+                     <a href="#" class="body__link">Гостиные Прованс</a>
+                     <a href="#" class="body__link">Гостиные из массива</a>
+                     <a href="#" class="body__link">Венге мебель для гостиной</a>
+                     <a href="#" class="body__link">Мини стенки</a>
+                     <a href="#" class="body__link">Недорогие гостинные</a>
+                  </div>
+               </div>
+            </div>
+            <div class="nav__item">
+               <a href="#" class="nav__item-link"> Консоли</a>
+            </div>
+            <div class="nav__item">
+               <div class="nav__item-header" id="headingOne">
+                  <button
+                     class="main__nav__block-item collapsed""
+                     data-toggle="collapse"
+                     data-target="#collapseSevenMob"
+                     aria-expanded="true"
+                     aria-controls="collapseSevenMob"
+                  >
+                     Кровати
+                  </button>
+               </div>
+      
+               <div id="collapseSevenMob" class="collapse" aria-labelledby="headingOne" data-parent="#accordionMobTwo">
+                  <div class="nav__item-body">
+                     <a href="#" class="body__link">Белая мебель для гостиной</a>
+                     <a href="#" class="body__link">Классическая мебель для гостиной</a>
+                     <a href="#" class="body__link">Черная мебель для гостиной</a>
+                     <a href="#" class="body__link">Гостиные Прованс</a>
+                     <a href="#" class="body__link">Гостиные из массива</a>
+                     <a href="#" class="body__link">Венге мебель для гостиной</a>
+                     <a href="#" class="body__link">Мини стенки</a>
+                     <a href="#" class="body__link">Недорогие гостинные</a>
+                  </div>
+               </div>
+            </div>
+            <div class="nav__item">
+               <a href="#" class="nav__item-link"> Полки</a>
+            </div>
+            <div class="nav__item">
+               <a href="#" class="nav__item-link"> Стеллажи</a>
+            </div>
+            <div class="nav__item">
+               <div class="nav__item-header" id="headingOne">
+                  <button
+                     class="main__nav__block-item collapsed""
+                     data-toggle="collapse"
+                     data-target="#collapseEightMob"
+                     aria-expanded="true"
+                     aria-controls="collapseEightMob"
+                  >
+                     Столы, столы-трансформеры
+                  </button>
+               </div>
+      
+               <div id="collapseEightMob" class="collapse" aria-labelledby="headingOne" data-parent="#accordionMobTwo">
+                  <div class="nav__item-body">
+                     <a href="#" class="body__link">Белая мебель для гостиной</a>
+                     <a href="#" class="body__link">Классическая мебель для гостиной</a>
+                     <a href="#" class="body__link">Черная мебель для гостиной</a>
+                     <a href="#" class="body__link">Гостиные Прованс</a>
+                     <a href="#" class="body__link">Гостиные из массива</a>
+                     <a href="#" class="body__link">Венге мебель для гостиной</a>
+                     <a href="#" class="body__link">Мини стенки</a>
+                     <a href="#" class="body__link">Недорогие гостинные</a>
+                  </div>
+               </div>
+            </div>
+            <div class="nav__item">
+               <a href="#" class="nav__item-link"> Столы журнальные </a>
+            </div>
+            <div class="nav__item">
+               <a href="#" class="nav__item-link"> Столы письменные </a>
+            </div>
+            <div class="nav__item">
+               <a href="#" class="nav__item-link"> Стулья, табуреты </a>
+            </div>
+            <div class="nav__item">
+               <a href="#" class="nav__item-link"> ТВ тумбы, тв стойки </a>
+            </div>
+            <div class="nav__item">
+               <a href="#" class="nav__item-link"> Туалетные столы </a>
+            </div>
+            <div class="nav__item">
+               <a href="#" class="nav__item-link"> Тумбы прикроватные </a>
+            </div>
+            <div class="nav__item">
+               <a href="#" class="nav__item-link"> Тумбы для прихожей </a>
+            </div>
+            <div class="nav__item">
+               <a href="#" class="nav__item-link"> Шкафы </a>
+            </div>
+            <div class="nav__item">
+               <a href="#" class="nav__item-link"> Распродажа выставочных образцов </a>
+            </div>
+            <div class="nav__item">
+               <a href="#" class="nav__item-link"> Польская мебель </a>
+            </div>
+            <div class="nav__item">
+               <a href="#" class="nav__item-link"> Одеяла, подушки </a>
+            </div>
+         </div>
+         
+      </div>
+
+   </div>
+   <!-- <div class="main__nav__block">
+      <div class="main__nav__block-title">
+         <p class="block-title__text">Предметы интерьера</p>
+      </div>
+      <div class="nav__item">
+         <div class="nav__item-header" id="headingOne">
+            <button
+               class="main__nav__block-item collapsed""
+               data-toggle="collapse"
+               data-target="#collapseFourMob"
+               aria-expanded="true"
+               aria-controls="collapseFourMob"
+            >
+               Матрасы
+            </button>
+         </div>
+
+         <div id="collapseFourMob" class="collapse" aria-labelledby="headingOne" data-parent="#accordionMob">
+            <div class="nav__item-body">
+               <a href="#" class="body__link">Белая мебель для гостиной</a>
+               <a href="#" class="body__link">Классическая мебель для гостиной</a>
+               <a href="#" class="body__link">Черная мебель для гостиной</a>
+               <a href="#" class="body__link">Гостиные Прованс</a>
+               <a href="#" class="body__link">Гостиные из массива</a>
+               <a href="#" class="body__link">Венге мебель для гостиной</a>
+               <a href="#" class="body__link">Мини стенки</a>
+               <a href="#" class="body__link">Недорогие гостинные</a>
+            </div>
+         </div>
+      </div>
+      <div class="nav__item">
+         <a href="#" class="nav__item-link">Банкетки, пуфы</a>
+      </div>
+
+      <div class="nav__item">
+         <div class="nav__item-header" id="headingOne">
+            <button
+               class="main__nav__block-item collapsed""
+               data-toggle="collapse"
+               data-target="#collapseFiveMob"
+               aria-expanded="true"
+               aria-controls="collapseFiveMob"
+            >
+               Витрины
+            </button>
+         </div>
+
+         <div id="collapseFiveMob" class="collapse" aria-labelledby="headingOne" data-parent="#accordionMob">
+            <div class="nav__item-body">
+               <a href="#" class="body__link">Белая мебель для гостиной</a>
+               <a href="#" class="body__link">Классическая мебель для гостиной</a>
+               <a href="#" class="body__link">Черная мебель для гостиной</a>
+               <a href="#" class="body__link">Гостиные Прованс</a>
+               <a href="#" class="body__link">Гостиные из массива</a>
+               <a href="#" class="body__link">Венге мебель для гостиной</a>
+               <a href="#" class="body__link">Мини стенки</a>
+               <a href="#" class="body__link">Недорогие гостинные</a>
+            </div>
+         </div>
+      </div>
+      <div class="nav__item">
+         <a href="#" class="nav__item-link">Зеркала</a>
+      </div>
+      <div class="nav__item">
+         <div class="nav__item-header" id="headingOne">
+            <button class="main__nav__block-item collapsed"" data-toggle="collapse" data-target="#collapseSixMob" aria-expanded="true" aria-controls="collapseSixMob">
+               Комоды
+            </button>
+         </div>
+
+         <div id="collapseSixMob" class="collapse" aria-labelledby="headingOne" data-parent="#accordionMob">
+            <div class="nav__item-body">
+               <a href="#" class="body__link">Белая мебель для гостиной</a>
+               <a href="#" class="body__link">Классическая мебель для гостиной</a>
+               <a href="#" class="body__link">Черная мебель для гостиной</a>
+               <a href="#" class="body__link">Гостиные Прованс</a>
+               <a href="#" class="body__link">Гостиные из массива</a>
+               <a href="#" class="body__link">Венге мебель для гостиной</a>
+               <a href="#" class="body__link">Мини стенки</a>
+               <a href="#" class="body__link">Недорогие гостинные</a>
+            </div>
+         </div>
+      </div>
+      <div class="nav__item">
+         <a href="#" class="nav__item-link"> Консоли</a>
+      </div>
+      <div class="nav__item">
+         <div class="nav__item-header" id="headingOne">
+            <button
+               class="main__nav__block-item collapsed""
+               data-toggle="collapse"
+               data-target="#collapseSevenMob"
+               aria-expanded="true"
+               aria-controls="collapseSevenMob"
+            >
+               Кровати
+            </button>
+         </div>
+
+         <div id="collapseSevenMob" class="collapse" aria-labelledby="headingOne" data-parent="#accordionMob">
+            <div class="nav__item-body">
+               <a href="#" class="body__link">Белая мебель для гостиной</a>
+               <a href="#" class="body__link">Классическая мебель для гостиной</a>
+               <a href="#" class="body__link">Черная мебель для гостиной</a>
+               <a href="#" class="body__link">Гостиные Прованс</a>
+               <a href="#" class="body__link">Гостиные из массива</a>
+               <a href="#" class="body__link">Венге мебель для гостиной</a>
+               <a href="#" class="body__link">Мини стенки</a>
+               <a href="#" class="body__link">Недорогие гостинные</a>
+            </div>
+         </div>
+      </div>
+      <div class="nav__item">
+         <a href="#" class="nav__item-link"> Полки</a>
+      </div>
+      <div class="nav__item">
+         <a href="#" class="nav__item-link"> Стеллажи</a>
+      </div>
+      <div class="nav__item">
+         <div class="nav__item-header" id="headingOne">
+            <button
+               class="main__nav__block-item collapsed""
+               data-toggle="collapse"
+               data-target="#collapseEightMob"
+               aria-expanded="true"
+               aria-controls="collapseEightMob"
+            >
+               Столы, столы-трансформеры
+            </button>
+         </div>
+
+         <div id="collapseEightMob" class="collapse" aria-labelledby="headingOne" data-parent="#accordionMob">
+            <div class="nav__item-body">
+               <a href="#" class="body__link">Белая мебель для гостиной</a>
+               <a href="#" class="body__link">Классическая мебель для гостиной</a>
+               <a href="#" class="body__link">Черная мебель для гостиной</a>
+               <a href="#" class="body__link">Гостиные Прованс</a>
+               <a href="#" class="body__link">Гостиные из массива</a>
+               <a href="#" class="body__link">Венге мебель для гостиной</a>
+               <a href="#" class="body__link">Мини стенки</a>
+               <a href="#" class="body__link">Недорогие гостинные</a>
+            </div>
+         </div>
+      </div>
+      <div class="nav__item">
+         <a href="#" class="nav__item-link"> Столы журнальные </a>
+      </div>
+      <div class="nav__item">
+         <a href="#" class="nav__item-link"> Столы письменные </a>
+      </div>
+      <div class="nav__item">
+         <a href="#" class="nav__item-link"> Стулья, табуреты </a>
+      </div>
+      <div class="nav__item">
+         <a href="#" class="nav__item-link"> ТВ тумбы, тв стойки </a>
+      </div>
+      <div class="nav__item">
+         <a href="#" class="nav__item-link"> Туалетные столы </a>
+      </div>
+      <div class="nav__item">
+         <a href="#" class="nav__item-link"> Тумбы прикроватные </a>
+      </div>
+      <div class="nav__item">
+         <a href="#" class="nav__item-link"> Тумбы для прихожей </a>
+      </div>
+      <div class="nav__item">
+         <a href="#" class="nav__item-link"> Шкафы </a>
+      </div>
+      <div class="nav__item">
+         <a href="#" class="nav__item-link"> Распродажа выставочных образцов </a>
+      </div>
+      <div class="nav__item">
+         <a href="#" class="nav__item-link"> Польская мебель </a>
+      </div>
+      <div class="nav__item">
+         <a href="#" class="nav__item-link"> Одеяла, подушки </a>
+      </div>
+   </div> -->
+</div>
+
+
+
+</div>
+               <div class="col-md-13">
+                  <div class="nav-history d-flex align-items-center" style="margin-top: 0; margin-bottom: 10px">
+                     <a href="#" class="history-item">Главная </a>
+                     <p class="slash-item">/</p>
+                     <a href="#" class="history-item now">Корзина </a>
+                  </div>
+                  <div class="d-flex justify-content-between align-items-end mb-3">
+                     <h1 class="title text-left mb-0">Корзина</h1>
+                     <button class="resetBasket d-flex align-items-center">
+                        <svg
+                           xmlns="http://www.w3.org/2000/svg"
+                           width="16"
+                           height="16"
+                           fill="red"
+                           class="bi bi-x-lg"
+                           viewBox="0 0 16 16"
+                           style="margin-right: 10px"
+                        >
+                           <path
+                              d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"
+                           />
+                        </svg>
+                        Очистить корзину
+                     </button>
+                  </div>
+                  <div style="overflow-x: auto">
+                     <div class="cart-table" style="width: 1532px">
+                        <div class="d-flex justify-content-between align-items-center table-title-row">
+                           <div class="cart-table__colOne">ID</div>
+                           <div class="cart-table__colTwo">Фото</div>
+                           <div class="cart-table__colThree">Описание</div>
+                           <div class="cart-table__colFour">Количество</div>
+                           <div class="cart-table__colFive">Цена</div>
+                           <div class="cart-table__colSix">Скидка</div>
+                           <div class="cart-table__colSeven">Со скидкой</div>
+                           <div class="cart-table__colEight">Итого</div>
+                           <div class="cart-table__colNine">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#fff" class="bi bi-trash" viewBox="0 0 16 16">
+                                 <path
+                                    d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"
+                                 />
+                                 <path
+                                    fill-rule="evenodd"
+                                    d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"
+                                 />
+                              </svg>
+                           </div>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-between table-body-row">
+                           <div class="cart-table__colOne">8</div>
+                           <div class="cart-table__colTwo">
+                              <a href="">
+                                 <img src="img/cardGalleryImg.png" alt="" />
+                              </a>
+                           </div>
+                           <div class="cart-table__colThree">
+                              <div class="d-block text-left">
+                                 <span class="d-block">Гостинная Mariana</span>
+                                 <p>Обеденная группа Мариана (Mariana) от фабрики Беллона. В стоимость входит: Витрина 1дв...</p>
+                              </div>
+                           </div>
+                           <div class="cart-table__colFour">
+                              <div class="counter d-flex align-items-center justify-content-between">
+                                 <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="16"
+                                    height="16"
+                                    fill="currentColor"
+                                    class="bi bi-dash"
+                                    viewBox="0 0 16 16"
+                                    data-func="minus"
+                                 >
+                                    <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z" />
+                                 </svg>
+                                 <p class="table-count">1</p>
+                                 <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="16"
+                                    height="16"
+                                    fill="currentColor"
+                                    class="bi bi-plus"
+                                    data-func="plus"
+                                    viewBox="0 0 16 16"
+                                 >
+                                    <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
+                                 </svg>
+                              </div>
+                           </div>
+                           <div class="cart-table__colFive">154 200 р.</div>
+                           <div class="cart-table__colSix">39 500</div>
+                           <div class="cart-table__colSeven">114 700 р.</div>
+                           <div class="cart-table__colEight">114 700 р.</div>
+                           <div class="cart-table__colNine">
+                              <svg
+                                 xmlns="http://www.w3.org/2000/svg"
+                                 style="transform: rotate(45deg)"
+                                 width="16"
+                                 height="16"
+                                 fill="red"
+                                 class="bi bi-plus-circle"
+                                 viewBox="0 0 16 16"
+                              >
+                                 <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                                 <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
+                              </svg>
+                           </div>
+                        </div>
+                        <div class="table-footer d-flex align-items-center justify-content-end">Итого: <span>114 700 р.</span></div>
+                     </div>
+                  </div>
+
+                  <div class="btns-table d-flex align-item-center justify-content-end">
+                     <button class="btn _button">Оформить заказ</button>
+                     <button class="btn _button" data-toggle="modal" data-target="#exampleModalLabelTel">Быстрый заказ</button>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </main>
+      <footer class="footer">
+   <div class="container">
+      <div class="row justify-content-between">
+         <div class="col-md-3">
+            <a href="#" class="footer__logo">
+               <img src="img/footer-logo.svg" alt="" class="footer__logo-img" />
+            </a>
+            <p class="footer-item desk">Copyright©compassmebel.ru 2022</p>
+            <p class="footer-item desk">Все права защищены.</p>
+         </div>
+         <div class="col-md-3">
+            <p class="footer-item__title">Помощь покупателю</p>
+            <a href="#" class="footer-item">Как заказать товар </a>
+            <a href="#" class="footer-item">Оплата</a>
+            <a href="#" class="footer-item">Доставка, сборка</a>
+            <a href="#" class="footer-item"> Обмен, возврат</a>
+            <a href="#" class="footer-item">Отзывы</a>
+         </div>
+         <div class="col-md-4">
+            <p class="footer-item__title">С нами выгодно</p>
+            <a href="#" class="footer-item">Рассрочка, кредит</a>
+            <a href="#" class="footer-item">Условия обработки и хранения данных </a>
+            <a href="#" class="footer-item">Подарки</a>
+            <a href="#" class="footer-item">Распродажа</a>
+            <a href="#" class="footer-item">Нашли дешевле, снизим цену</a>
+         </div>
+         <div class="col-md-2">
+            <p class="footer-item__title">Партнёрам</p>
+            <a href="#" class="footer-item">Поставщикам </a>
+            <a href="#" class="footer-item">Дилерам</a>
+            <a href="#" class="footer-item">Дизайнерам</a>
+            <a href="#" class="footer-item"> Вакансии</a>
+            <a href="#" class="footer-item">Контакты</a>
+         </div>
+         <div class="col-md-2">
+            <div class="d-flex align-items-center footer__contacts">
+               <svg xmlns="http://www.w3.org/2000/svg"  class="contacts__phone-icon" width="16" height="16" fill="#00a752" class="bi bi-telephone" viewBox="0 0 16 16" style="margin-right: 10px">
+                  <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"></path>
+               </svg>
+               <div class="d-block contacts__numbers">
+                  <a href="#" class="numbers__item">7 (495) 477-81-90</a>
+                  <a href="#" class="numbers__item">7 (800) 333-45-17</a>
+               </div>
+            </div>
+            <a class="btn d-block ml-0 _button footer__contacts-button" data-toggle="modal" data-target="#exampleModalLabelTel" > Обратный звонок </a>
+         </div>
+         <div class="col-md-3">
+            <p class="footer-item mob">Copyright©compassmebel.ru 2022</p>
+            <p class="footer-item mob">Все права защищены.</p>
+         </div>
+      </div>
+   </div>
+   <div class="footer-partners d-flex">
+      <div class="container">
+         <div class="partners-content d-block">
+            <img src="img/partner.svg" alt="" class="partner-img" />
+         </div>
+      </div>
+   </div>
+</footer>
+
+      <script
+         src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+         crossorigin="anonymous"
+      ></script>
+      <script
+         src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+         integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+         crossorigin="anonymous"
+      ></script>
+      <script
+         src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+         crossorigin="anonymous"
+      ></script>
+      <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js?_v=20220912000016"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js?_v=20220912000016"></script>
+      <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js?_v=20220912000016"></script>
+      <script>
+         document.querySelector(".mob-menuBtn").addEventListener("click", () => {
+            document.querySelector(".hamburger-menu").classList.add("show");
+            document.body.style.height = "100vh";
+         });
+         document.querySelector(".close-bg").addEventListener("click", () => {
+            document.querySelector(".hamburger-menu").classList.remove("show");
+            document.body.style.height = "auto";
+         });
+      </script>
+      <script>
+         const funcBtns = document.querySelectorAll(".bi");
+         const count = document.querySelector(".table-count");
+         funcBtns.forEach((item) => {
+            item.addEventListener("click", (e) => {
+               const nowCount = +count.innerHTML;
+               if (e.currentTarget.dataset.func === "plus") {
+                  count.innerHTML = nowCount + 1;
+               } else if (nowCount > 0) {
+                  count.innerHTML = nowCount - 1;
+               }
+
+               // console.log(parseInt(count.innerHTML))
+            });
+         });
+      </script>
+      <script>
+         window.onload = function () {
+            document.querySelector("#preloader").style.display = "none";
+         };
+      </script>
+   </body>
+</html>

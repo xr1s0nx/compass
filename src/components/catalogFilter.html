@@ -1,0 +1,335 @@
+<div class="catalog-filter d-flex justify-content-between align-items-center">
+   <div class="dropdown">
+      <button class="filter-item d-flex" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+         <p class="item-text">Цена</p>
+         <img src="img/watchedArr.svg" alt="" class="item-arrow" />
+      </button>
+
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton3">
+         <div class="menu-content">
+            <div id="slider-range"></div>
+            <div class="d-flex align-items-center range-out">
+               <p class="from">от</p>
+               <input type="number" id="amount1" value="0" />
+               <p class="to">до</p>
+               <input type="number" id="amount2" value="300000" />
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="dropdown">
+      <button class="filter-item d-flex" type="button" id="dropdownMenuButton2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+         <p class="item-text">Материал</p>
+         <img src="img/watchedArr.svg" alt="" class="item-arrow" />
+      </button>
+      <div class="dropdown-menu">
+         <div class="radio-input dropdown-item">
+            <input type="radio" id="dropdown_belverom" class="form-radio-input" name="filter[seria][]" value="Belverom" />
+            <label class="form-radio-label" for="dropdown_belverom" data-value="dropdown_belverom">Belverom</label>
+         </div>
+         <div class="radio-input dropdown-item">
+            <input type="radio" id="dropdown_bejli" class="form-radio-input" name="filter[seria][]" value="Бейли" />
+            <label class="form-radio-label" for="dropdown_bejli" data-value="dropdown_bejli">Бейли</label>
+         </div>
+         <div class="radio-input dropdown-item">
+            <input type="radio" id="dropdown_forest" class="form-radio-input" name="filter[seria][]" value="Форест" />
+            <label class="form-radio-label" for="dropdown_forest" data-value="dropdown_forest">Форест</label>
+         </div>
+         <div class="radio-input dropdown-item">
+            <input type="radio" id="dropdown_bramming" class="form-radio-input" name="filter[seria][]" value="Брамминг" />
+            <label class="form-radio-label" for="dropdown_bramming" data-value="dropdown_bramming">Брамминг</label>
+         </div>
+         <div class="radio-input dropdown-item">
+            <input type="radio" id="dropdown_provans-mebel-grad" class="form-radio-input" name="filter[seria][]" value="Прованс Мебель Град" />
+            <label class="form-radio-label" for="dropdown_provans-mebel" data-value="dropdown_provans-mebel-grad">Прованс Мебель Град</label>
+         </div>
+         <div class="radio-input dropdown-item">
+            <input type="radio" id="dropdown_tivoli" class="form-radio-input" name="filter[seria][]" value="Тиволи" />
+            <label class="form-radio-label" for="dropdown_tivoli" data-value="dropdown_tivoli">Тиволи</label>
+         </div>
+         <div class="radio-input dropdown-item">
+            <input type="radio" id="dropdown_country" class="form-radio-input" name="filter[seria][]" value="Country" />
+            <label class="form-radio-label" for="dropdown_country" data-value="dropdown_country">Country</label>
+         </div>
+         <div class="radio-input dropdown-item">
+            <input type="radio" id="dropdown_uniko" class="form-radio-input" name="filter[seria][]" value="Унико" />
+            <label class="form-radio-label" for="dropdown_uniko" data-value="dropdown_uniko">Унико</label>
+         </div>
+         <div class="radio-input dropdown-item">
+            <input type="radio" id="dropdown_loft-mbb" class="form-radio-input" name="filter[seria][]" value="Лофт МББ" />
+            <label class="form-radio-label" for="dropdown_loft-mb" data-value="dropdown_loft-mbb">Лофт МББ</label>
+         </div>
+         <div class="radio-input dropdown-item">
+            <input type="radio" id="dropdown_marsel-mbb" class="form-radio-input" name="filter[seria][]" value="Марсель МББ" />
+            <label class="form-radio-label" for="dropdown_marsel-mb" data-value="dropdown_marsel-mbb">Марсель МББ</label>
+         </div>
+      </div>
+   </div>
+   <div class="dropdown">
+      <button class="filter-item d-flex" type="button" id="dropdownMenuButton3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+         <p class="item-text">Материал фасада</p>
+         <img src="img/watchedArr.svg" alt="" class="item-arrow" />
+      </button>
+      <div class="dropdown-menu d-flex">
+         <label class="containerCheck" data-value="Check1">Check1
+            <input type="checkbox" >
+            <span class="checkmark"></span>
+          </label>
+          
+          <label class="containerCheck" data-value="Check2">Check2
+            <input type="checkbox">
+            <span class="checkmark"></span>
+          </label>
+          
+          <label class="containerCheck" data-value="Check3">Check3
+            <input type="checkbox">
+            <span class="checkmark"></span>
+          </label>
+          
+          <label class="containerCheck" data-value="Check4">Check4
+            <input type="checkbox">
+            <span class="checkmark"></span>
+          </label>
+      </div>
+   </div>
+   <div class="dropdown">
+      <button class="filter-item d-flex" type="button" id="dropdownMenuButton4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+         <p class="item-text">Серия</p>
+         <img src="img/watchedArr.svg" alt="" class="item-arrow" />
+      </button>
+      <div class="dropdown-menu">
+         <div class="radio-input dropdown-item">
+            <input type="radio" id="dropdown_belverom" class="form-radio-input" name="filter[seria][]" value="Belverom" />
+            <label class="form-radio-label" for="dropdown_belverom" data-value="dropdown_belverom">Belverom</label>
+         </div>
+         <div class="radio-input dropdown-item">
+            <input type="radio" id="dropdown_bejli" class="form-radio-input" name="filter[seria][]" value="Бейли" />
+            <label class="form-radio-label" for="dropdown_bejli" data-value="dropdown_bejli">Бейли</label>
+         </div>
+         <div class="radio-input dropdown-item">
+            <input type="radio" id="dropdown_forest" class="form-radio-input" name="filter[seria][]" value="Форест" />
+            <label class="form-radio-label" for="dropdown_forest" data-value="dropdown_forest">Форест</label>
+         </div>
+         <div class="radio-input dropdown-item">
+            <input type="radio" id="dropdown_bramming" class="form-radio-input" name="filter[seria][]" value="Брамминг" />
+            <label class="form-radio-label" for="dropdown_bramming" data-value="dropdown_bramming">Брамминг</label>
+         </div>
+         <div class="radio-input dropdown-item">
+            <input type="radio" id="dropdown_provans-mebel-grad" class="form-radio-input" name="filter[seria][]" value="Прованс Мебель Град" />
+            <label class="form-radio-label" for="dropdown_provans-mebe data-value="dropdown_provans-mebel-grad">Прованс Мебель Град</label>
+         </div>
+         <div class="radio-input dropdown-item">
+            <input type="radio" id="dropdown_tivoli" class="form-radio-input" name="filter[seria][]" value="Тиволи" />
+            <label class="form-radio-label" for="dropdown_tivoli" data-value="dropdown_tivoli">Тиволи</label>
+         </div>
+         <div class="radio-input dropdown-item">
+            <input type="radio" id="dropdown_country" class="form-radio-input" name="filter[seria][]" value="Country" />
+            <label class="form-radio-label" for="dropdown_country" data-value="dropdown_country">Country</label>
+         </div>
+         <div class="radio-input dropdown-item">
+            <input type="radio" id="dropdown_uniko" class="form-radio-input" name="filter[seria][]" value="Унико" />
+            <label class="form-radio-label" for="dropdown_uniko" data-value="dropdown_uniko">Унико</label>
+         </div>
+         <div class="radio-input dropdown-item">
+            <input type="radio" id="dropdown_loft-mbb" class="form-radio-input" name="filter[seria][]" value="Лофт МББ" />
+            <label class="form-radio-label" for="dropdown_loft-mb data-value="dropdown_loft-mbb">Лофт МББ</label>
+         </div>
+         <div class="radio-input dropdown-item">
+            <input type="radio" id="dropdown_marsel-mbb" class="form-radio-input" name="filter[seria][]" value="Марсель МББ" />
+            <label class="form-radio-label" for="dropdown_marsel-mb data-value="dropdown_marsel-mbb">Марсель МББ</label>
+         </div>
+      </div>
+   </div>
+   <div class="dropdown">
+      <button class="filter-item d-flex" type="button" id="dropdownMenuButton5" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+         <p class="item-text">Страна производитель</p>
+         <img src="img/watchedArr.svg" alt="" class="item-arrow" />
+      </button>
+      <div class="dropdown-menu">
+         <div class="radio-input dropdown-item">
+            <input type="radio" id="dropdown_belverom" class="form-radio-input" name="filter[seria][]" value="Belverom" />
+            <label class="form-radio-label" for="dropdown_belverom" data-value="dropdown_belverom">Belverom</label>
+         </div>
+         <div class="radio-input dropdown-item">
+            <input type="radio" id="dropdown_bejli" class="form-radio-input" name="filter[seria][]" value="Бейли" />
+            <label class="form-radio-label" for="dropdown_bejli" data-value="dropdown_bejli">Бейли</label>
+         </div>
+         <div class="radio-input dropdown-item">
+            <input type="radio" id="dropdown_forest" class="form-radio-input" name="filter[seria][]" value="Форест" />
+            <label class="form-radio-label" for="dropdown_forest" data-value="dropdown_forest">Форест</label>
+         </div>
+         <div class="radio-input dropdown-item">
+            <input type="radio" id="dropdown_bramming" class="form-radio-input" name="filter[seria][]" value="Брамминг" />
+            <label class="form-radio-label" for="dropdown_bramming" data-value="dropdown_bramming">Брамминг</label>
+         </div>
+         <div class="radio-input dropdown-item">
+            <input type="radio" id="dropdown_provans-mebel-grad" class="form-radio-input" name="filter[seria][]" value="Прованс Мебель Град" />
+            <label class="form-radio-label" for="dropdown_provans-mebe data-value="dropdown_provans-mebel-grad">Прованс Мебель Град</label>
+         </div>
+         <div class="radio-input dropdown-item">
+            <input type="radio" id="dropdown_tivoli" class="form-radio-input" name="filter[seria][]" value="Тиволи" />
+            <label class="form-radio-label" for="dropdown_tivoli" data-value="dropdown_tivoli">Тиволи</label>
+         </div>
+         <div class="radio-input dropdown-item">
+            <input type="radio" id="dropdown_country" class="form-radio-input" name="filter[seria][]" value="Country" />
+            <label class="form-radio-label" for="dropdown_country" data-value="dropdown_country">Country</label>
+         </div>
+         <div class="radio-input dropdown-item">
+            <input type="radio" id="dropdown_uniko" class="form-radio-input" name="filter[seria][]" value="Унико" />
+            <label class="form-radio-label" for="dropdown_uniko" data-value="dropdown_uniko">Унико</label>
+         </div>
+         <div class="radio-input dropdown-item">
+            <input type="radio" id="dropdown_loft-mbb" class="form-radio-input" name="filter[seria][]" value="Лофт МББ" />
+            <label class="form-radio-label" for="dropdown_loft-mb data-value="dropdown_loft-mbb">Лофт МББ</label>
+         </div>
+         <div class="radio-input dropdown-item">
+            <input type="radio" id="dropdown_marsel-mbb" class="form-radio-input" name="filter[seria][]" value="Марсель МББ" />
+            <label class="form-radio-label" for="dropdown_marsel-mb data-value="dropdown_marsel-mbb">Марсель МББ</label>
+         </div>
+      </div>
+   </div>
+   <div class="dropdown">
+      <button class="filter-item d-flex" type="button" id="dropdownMenuButton6" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+         <p class="item-text">Фабрика</p>
+         <img src="img/watchedArr.svg" alt="" class="item-arrow" />
+      </button>
+      <div class="dropdown-menu">
+         <div class="radio-input dropdown-item">
+            <input type="radio" id="dropdown_belverom" class="form-radio-input" name="filter[seria][]" value="Belverom" />
+            <label class="form-radio-label" for="dropdown_belverom" data-value="dropdown_belverom">Belverom</label>
+         </div>
+         <div class="radio-input dropdown-item">
+            <input type="radio" id="dropdown_bejli" class="form-radio-input" name="filter[seria][]" value="Бейли" />
+            <label class="form-radio-label" for="dropdown_bejli" data-value="dropdown_bejli">Бейли</label>
+         </div>
+         <div class="radio-input dropdown-item">
+            <input type="radio" id="dropdown_forest" class="form-radio-input" name="filter[seria][]" value="Форест" />
+            <label class="form-radio-label" for="dropdown_forest" data-value="dropdown_forest">Форест</label>
+         </div>
+         <div class="radio-input dropdown-item">
+            <input type="radio" id="dropdown_bramming" class="form-radio-input" name="filter[seria][]" value="Брамминг" />
+            <label class="form-radio-label" for="dropdown_bramming" data-value="dropdown_bramming">Брамминг</label>
+         </div>
+         <div class="radio-input dropdown-item">
+            <input type="radio" id="dropdown_provans-mebel-grad" class="form-radio-input" name="filter[seria][]" value="Прованс Мебель Град" />
+            <label class="form-radio-label" for="dropdown_provans-mebe data-value="dropdown_provans-mebel-grad">Прованс Мебель Град</label>
+         </div>
+         <div class="radio-input dropdown-item">
+            <input type="radio" id="dropdown_tivoli" class="form-radio-input" name="filter[seria][]" value="Тиволи" />
+            <label class="form-radio-label" for="dropdown_tivoli" data-value="dropdown_tivoli">Тиволи</label>
+         </div>
+         <div class="radio-input dropdown-item">
+            <input type="radio" id="dropdown_country" class="form-radio-input" name="filter[seria][]" value="Country" />
+            <label class="form-radio-label" for="dropdown_country" data-value="dropdown_country">Country</label>
+         </div>
+         <div class="radio-input dropdown-item">
+            <input type="radio" id="dropdown_uniko" class="form-radio-input" name="filter[seria][]" value="Унико" />
+            <label class="form-radio-label" for="dropdown_uniko" data-value="dropdown_uniko">Унико</label>
+         </div>
+         <div class="radio-input dropdown-item">
+            <input type="radio" id="dropdown_loft-mbb" class="form-radio-input" name="filter[seria][]" value="Лофт МББ" />
+            <label class="form-radio-label" for="dropdown_loft-mb data-value="dropdown_loft-mbb">Лофт МББ</label>
+         </div>
+         <div class="radio-input dropdown-item">
+            <input type="radio" id="dropdown_marsel-mbb" class="form-radio-input" name="filter[seria][]" value="Марсель МББ" />
+            <label class="form-radio-label" for="dropdown_marsel-mb data-value="dropdown_marsel-mbb">Марсель МББ</label>
+         </div>
+      </div>
+   </div>
+   <div class="dropdown">
+      <button class="filter-item d-flex" type="button" id="dropdownMenuButton7" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+         <p class="item-text">Цвет корпуса</p>
+         <img src="img/watchedArr.svg" alt="" class="item-arrow" />
+      </button>
+      <div class="dropdown-menu">
+         <div class="radio-input dropdown-item">
+            <input type="radio" id="dropdown_belverom" class="form-radio-input" name="filter[seria][]" value="Belverom" />
+            <label class="form-radio-label" for="dropdown_belverom" data-value="dropdown_belverom">Belverom</label>
+         </div>
+         <div class="radio-input dropdown-item">
+            <input type="radio" id="dropdown_bejli" class="form-radio-input" name="filter[seria][]" value="Бейли" />
+            <label class="form-radio-label" for="dropdown_bejli" data-value="dropdown_bejli">Бейли</label>
+         </div>
+         <div class="radio-input dropdown-item">
+            <input type="radio" id="dropdown_forest" class="form-radio-input" name="filter[seria][]" value="Форест" />
+            <label class="form-radio-label" for="dropdown_forest" data-value="dropdown_forest">Форест</label>
+         </div>
+         <div class="radio-input dropdown-item">
+            <input type="radio" id="dropdown_bramming" class="form-radio-input" name="filter[seria][]" value="Брамминг" />
+            <label class="form-radio-label" for="dropdown_bramming" data-value="dropdown_bramming">Брамминг</label>
+         </div>
+         <div class="radio-input dropdown-item">
+            <input type="radio" id="dropdown_provans-mebel-grad" class="form-radio-input" name="filter[seria][]" value="Прованс Мебель Град" />
+            <label class="form-radio-label" for="dropdown_provans-mebe data-value="dropdown_provans-mebel-grad">Прованс Мебель Град</label>
+         </div>
+         <div class="radio-input dropdown-item">
+            <input type="radio" id="dropdown_tivoli" class="form-radio-input" name="filter[seria][]" value="Тиволи" />
+            <label class="form-radio-label" for="dropdown_tivoli" data-value="dropdown_tivoli">Тиволи</label>
+         </div>
+         <div class="radio-input dropdown-item">
+            <input type="radio" id="dropdown_country" class="form-radio-input" name="filter[seria][]" value="Country" />
+            <label class="form-radio-label" for="dropdown_country" data-value="dropdown_country">Country</label>
+         </div>
+         <div class="radio-input dropdown-item">
+            <input type="radio" id="dropdown_uniko" class="form-radio-input" name="filter[seria][]" value="Унико" />
+            <label class="form-radio-label" for="dropdown_uniko" data-value="dropdown_uniko">Унико</label>
+         </div>
+         <div class="radio-input dropdown-item">
+            <input type="radio" id="dropdown_loft-mbb" class="form-radio-input" name="filter[seria][]" value="Лофт МББ" />
+            <label class="form-radio-label" for="dropdown_loft-mb data-value="dropdown_loft-mbb">Лофт МББ</label>
+         </div>
+         <div class="radio-input dropdown-item">
+            <input type="radio" id="dropdown_marsel-mbb" class="form-radio-input" name="filter[seria][]" value="Марсель МББ" />
+            <label class="form-radio-label" for="dropdown_marsel-mb data-value="dropdown_marsel-mbb">Марсель МББ</label>
+         </div>
+      </div>
+   </div>
+   <div class="dropdown">
+      <button class="filter-item d-flex" type="button" id="dropdownMenuButton8" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+         <p class="item-text">Цвет фасада</p>
+         <img src="img/watchedArr.svg" alt="" class="item-arrow" />
+      </button>
+      <div class="dropdown-menu">
+         <div class="radio-input dropdown-item">
+            <input type="radio" id="dropdown_belverom" class="form-radio-input" name="filter[seria][]" value="Belverom" />
+            <label class="form-radio-label" for="dropdown_belverom" data-value="dropdown_belverom">Belverom</label>
+         </div>
+         <div class="radio-input dropdown-item">
+            <input type="radio" id="dropdown_bejli" class="form-radio-input" name="filter[seria][]" value="Бейли" />
+            <label class="form-radio-label" for="dropdown_bejli" data-value="dropdown_bejli">Бейли</label>
+         </div>
+         <div class="radio-input dropdown-item">
+            <input type="radio" id="dropdown_forest" class="form-radio-input" name="filter[seria][]" value="Форест" />
+            <label class="form-radio-label" for="dropdown_forest" data-value="dropdown_forest">Форест</label>
+         </div>
+         <div class="radio-input dropdown-item">
+            <input type="radio" id="dropdown_bramming" class="form-radio-input" name="filter[seria][]" value="Брамминг" />
+            <label class="form-radio-label" for="dropdown_bramming" data-value="dropdown_bramming">Брамминг</label>
+         </div>
+         <div class="radio-input dropdown-item">
+            <input type="radio" id="dropdown_provans-mebel-grad" class="form-radio-input" name="filter[seria][]" value="Прованс Мебель Град" />
+            <label class="form-radio-label" for="dropdown_provans-mebe data-value="dropdown_provans-mebel-grad">Прованс Мебель Град</label>
+         </div>
+         <div class="radio-input dropdown-item">
+            <input type="radio" id="dropdown_tivoli" class="form-radio-input" name="filter[seria][]" value="Тиволи" />
+            <label class="form-radio-label" for="dropdown_tivoli" data-value="dropdown_tivoli">Тиволи</label>
+         </div>
+         <div class="radio-input dropdown-item">
+            <input type="radio" id="dropdown_country" class="form-radio-input" name="filter[seria][]" value="Country" />
+            <label class="form-radio-label" for="dropdown_country" data-value="dropdown_country">Country</label>
+         </div>
+         <div class="radio-input dropdown-item">
+            <input type="radio" id="dropdown_uniko" class="form-radio-input" name="filter[seria][]" value="Унико" />
+            <label class="form-radio-label" for="dropdown_uniko" data-value="dropdown_uniko">Унико</label>
+         </div>
+         <div class="radio-input dropdown-item">
+            <input type="radio" id="dropdown_loft-mbb" class="form-radio-input" name="filter[seria][]" value="Лофт МББ" />
+            <label class="form-radio-label" for="dropdown_loft-mb data-value="dropdown_loft-mbb">Лофт МББ</label>
+         </div>
+         <div class="radio-input dropdown-item">
+            <input type="radio" id="dropdown_marsel-mbb" class="form-radio-input" name="filter[seria][]" value="Марсель МББ" />
+            <label class="form-radio-label" for="dropdown_marsel-mb data-value="dropdown_marsel-mbb">Марсель МББ</label>
+         </div>
+      </div>
+   </div>
+</div>

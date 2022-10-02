@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+         href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,600&display=swap"
+         rel="stylesheet"
+      />
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+      <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css" />
+      <link rel="stylesheet" href="css/style.min.css" />
+      <title>Компасс</title>
+   </head>
+   <body>
+    
+      @@include('components/tel-modal.html')
+      @@include('components/preloader.html') @@include('components/reg-modal.html')
+      <header class="header">@@include('components/header.html')</header>
+      <main class="main" style="margin-top: 30px">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-3">@@include('components/navMenu.html')</div>
+               <div class="col-md-13">
+                  <div class="main-search__block" style="display: block">
+                     <input type="text" class="search__block-input" placeholder="Поиск" />
+                  </div>
+                  <div class="nav-history d-flex align-items-center" style="margin-top: 0; margin-bottom: 30px">
+                     <a href="#" class="history-item">Главная </a>
+                     <p class="slash-item">/</p>
+                     <a href="#" class="history-item">Каталог </a>
+                     <p class="slash-item">/</p>
+                     <a href="#" class="history-item now">Результат поиска по запросу 'test' </a>
+                  </div>
+                  <h1 class="title">Поиск по каталогу</h1>
+                  <div class="d-flex search-content justify-content-between">
+                     <div class="search-results">
+                        <div class="result-card d-flex align-item-center justify-content-between">
+                           <div class="img-wrap">
+                              <img src="img/cardGalleryImg.png" alt="" />
+                           </div>
+                           <div class="item-descr">
+                              <p class="item-title">Кровать Mira</p>
+                              <p class="item-text">
+                                 Уточнить <a href="#" style="color: rgb(0, 157, 248); border-bottom: 1px dashed rgb(0, 157, 248)">Другие кровати</a>
+                              </p>
+                              <p class="item-text">Кровать Mira От фабрики Bellona</p>
+                           </div>
+                           <div class="price-block d-block">
+                              <div class="d-flex align-item-center justify-content-between">
+                                 <p class="sale-price">60%</p>
+                                 <p class="price">22560₽</p>
+                              </div>
+                              <div class="btn more-btn">Подробнее</div>
+                           </div>
+                        </div>
+                        <div class="result-card d-flex align-item-center justify-content-between">
+                           <div class="img-wrap">
+                              <img src="img/cardGalleryImg.png" alt="" />
+                           </div>
+                           <div class="item-descr">
+                              <p class="item-title">Кровать Mira</p>
+                              <p class="item-text">
+                                 Уточнить <a href="#" style="color: rgb(0, 157, 248); border-bottom: 1px dashed rgb(0, 157, 248)">Другие кровати</a>
+                              </p>
+                              <p class="item-text">Кровать Mira От фабрики Bellona</p>
+                           </div>
+                           <div class="price-block d-block">
+                              <div class="d-flex align-item-center justify-content-between">
+                                 <p class="sale-price">60%</p>
+                                 <p class="price">22560₽</p>
+                              </div>
+                              <div class="btn more-btn">Подробнее</div>
+                           </div>
+                        </div>
+                        <div class="result-card d-flex align-item-center justify-content-between">
+                           <div class="img-wrap">
+                              <img src="img/cardGalleryImg.png" alt="" />
+                           </div>
+                           <div class="item-descr">
+                              <p class="item-title">Кровать Mira</p>
+                              <p class="item-text">
+                                 Уточнить <a href="#" style="color: rgb(0, 157, 248); border-bottom: 1px dashed rgb(0, 157, 248)">Другие кровати</a>
+                              </p>
+                              <p class="item-text">Кровать Mira От фабрики Bellona</p>
+                           </div>
+                           <div class="price-block d-block">
+                              <div class="d-flex align-item-center justify-content-between">
+                                 <p class="sale-price">60%</p>
+                                 <p class="price">22560₽</p>
+                              </div>
+                              <div class="btn more-btn">Подробнее</div>
+                           </div>
+                        </div>
+                        <div class="result-card d-flex align-item-center justify-content-between">
+                           <div class="img-wrap">
+                              <img src="img/cardGalleryImg.png" alt="" />
+                           </div>
+                           <div class="item-descr">
+                              <p class="item-title">Кровать Mira</p>
+                              <p class="item-text">
+                                 Уточнить <a href="#" style="color: rgb(0, 157, 248); border-bottom: 1px dashed rgb(0, 157, 248)">Другие кровати</a>
+                              </p>
+                              <p class="item-text">Кровать Mira От фабрики Bellona</p>
+                           </div>
+                           <div class="price-block d-block">
+                              <div class="d-flex align-item-center justify-content-between">
+                                 <p class="sale-price">60%</p>
+                                 <p class="price">22560₽</p>
+                              </div>
+                              <div class="btn more-btn">Подробнее</div>
+                           </div>
+                        </div>
+                        <div class="result-card d-flex align-item-center justify-content-between">
+                           <div class="img-wrap">
+                              <img src="img/cardGalleryImg.png" alt="" />
+                           </div>
+                           <div class="item-descr">
+                              <p class="item-title">Кровать Mira</p>
+                              <p class="item-text">
+                                 Уточнить <a href="#" style="color: rgb(0, 157, 248); border-bottom: 1px dashed rgb(0, 157, 248)">Другие кровати</a>
+                              </p>
+                              <p class="item-text">Кровать Mira От фабрики Bellona</p>
+                           </div>
+                           <div class="price-block d-block">
+                              <div class="d-flex align-item-center justify-content-between">
+                                 <p class="sale-price">60%</p>
+                                 <p class="price">22560₽</p>
+                              </div>
+                              <div class="btn more-btn">Подробнее</div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="help-search">
+                        <div class="title-block">
+                           <p>Уточнить поиск</p>
+                        </div>
+                        <ul class="items-block">
+                           <li><a href="#">Современные гостинные</a></li>
+                           <li><a href="#">Современные гостинные</a></li>
+                           <li><a href="#">Современные гостинные</a></li>
+                           <li><a href="#">Современные гостинные</a></li>
+                           <li><a href="#">Современные гостинные</a></li>
+                           <li><a href="#">Современные гостинные</a></li>
+                           <li><a href="#">Современные гостинные</a></li>
+                           <li><a href="#">Современные гостинные</a></li>
+                           <li><a href="#">Современные гостинные</a></li>
+                           <li><a href="#">Современные гостинные</a></li>
+                           <li><a href="#">Современные гостинные</a></li>
+                           <li><a href="#">Современные гостинные</a></li>
+                           <li><a href="#">Современные гостинные</a></li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </main>
+      @@include('components/footer.html')
+      <script
+         src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+         crossorigin="anonymous"
+      ></script>
+      <script
+         src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+         integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+         crossorigin="anonymous"
+      ></script>
+      <script
+         src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+         crossorigin="anonymous"
+      ></script>
+      <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+      <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+      <script>
+         document.querySelector(".mob-menuBtn").addEventListener("click", () => {
+            document.querySelector(".hamburger-menu").classList.add("show");
+            document.body.style.height = "100vh";
+         });
+         document.querySelector(".close-bg").addEventListener("click", () => {
+            document.querySelector(".hamburger-menu").classList.remove("show");
+            document.body.style.height = "auto";
+         });
+      </script>
+      <script>
+         window.onload = function () {
+            document.querySelector('#preloader').style.display = 'none';
+         };
+      </script>
+   </body>
+</html>

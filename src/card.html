@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+         href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,600&display=swap"
+         rel="stylesheet"
+      />
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+      <link rel="stylesheet" href="css/style.min.css" />
+      <title>Компасс</title>
+   </head>
+   <body>
+      @@include('components/tel-modal.html') @@include('components/preloader.html')
+      <div class="card-modals">
+         <div class="modal fade" id="cardModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+               <div class="modal-content">
+                  <div class="modal-header">
+                     <h5 class="modal-title text-left" style="margin: 0" id="exampleModalLabel">Доставка</h5>
+                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                     </button>
+                  </div>
+                  <div class="modal-body" style="max-height: 800px; overflow-y: auto; padding: 0 15px">
+                     Доставка
+                     <span>Компания "КОМПАСМЕБЕЛЬ" осуществляет доставку мебели по всей России</span>
+                     Наш магазин осуществляет доставку мебели по Москве и Московской области собственным автотранспортом, а так же в регионы России
+                     посредством транспортных компаний (работаем со всеми ТК). Приблизительную стоимость перевозки через ТК Вы можете рассчитать с
+                     помощью онлайн калькулятора, который предоставлен ниже (вес и объем товара уточняйте у оператора), либо обратиться за помощью к
+                     нашим менеджерам по телефону +7(499)504-88-50 Доставка товара - ОТДЕЛЬНАЯ УСЛУГА и оплачивается отдельно, в соответствии с
+                     правилами магазина.
+                     <span>Стоимость доставки:</span>
+                     1 600 руб по г. Москва. (*В рамках действующих акций доставка может быть в БЕСПЛАТНАЯ!) 1 600 руб по г. Москва+ (35 руб. за 1 км
+                     от МКАД) *Доставка без заноса в квартиру: в стоимость не включена разгрузка и перенос мебели к дому. Машина подъезжает
+                     максимально близко к месту разгрузки. ВНИМАНИЕ! Если мы не сможем связаться с получателем заказа в течение 2 дней с момента
+                     оформления по указанным Вами при оформлении заказа телефонам - заказ аннулируется! Будьте внимательны при оформлении заказа и,
+                     пожалуйста, укажите максимально возможное количество работающих телефонов.
+                     <span>Стоимость подъема</span>
+                     2% от стоимости заказа (но не менее 200руб) (*Подъем на лифте) 2%+1% (за каждый этаж подъёма) от стоимости заказа. (*Ручной
+                     подъем.) *при условии не вхождения в лифт, рассчитывается как смешанный подъем-подъем на лифе + ручной подъем, не вошедших в лифт
+                     предметов (матрас, решетка от кровати и т.д.) Вы можете самостоятельно рассчитать предварительную стоимость доставки мебели в Ваш
+                     город или обратиться к нам по тел. +7 499 504-88-50
+                     <span>Подъем мебели в квартиру</span>
+                     Ручной занос на 1 этаж из машины в квартиру, дом, особняк 2% от стоимости Вашего заказа. Ручной занос на 2 этаж и выше
+                     рассчитывается по формуле: 2%+1% (за каждый этаж подъёма) от стоимости заказа. Подъём в лифте (при условии, что габариты мебели
+                     позволяют произвести подъем в лифте без повреждений)*
+                     <span>Срок и время доставки</span>
+                     По Москве - как правило, в течение 1 - 3 рабочих дней со дня поступления заказа. Доставка осуществляется в рабочие дни по
+                     домашним адресам и офисам с 14-00 до 23-00 часов. Предварительно, не менее чем за 1 час до прибытия машины, с Вами созвонится
+                     менеджер службы доставки и согласует с Вами время прибытия машины. Внимание! Без предварительного согласования с клиентом времени
+                     прибытия машины и возможности принять заказ МЫ МАШИНУ НЕ ОТПРАВЛЯЕМ! Надеемся на Ваше понимание. Для более уверенной доставки,
+                     будьте добры, указывайте как можно больше телефонов для связи с Вами.
+                     <span>Доставка мебели по Москве</span>
+                     Наш магазин содержит свою службу доставки мебели. Для Вашего удобства мы: не заставим Вас долго ждать свой заказ (за исключением
+                     случаев, когда это от нас не зависит), мы обязательно согласуем с Вами удобное время доставки.
+                     <span>Срок формирования заказа</span>
+                     Срок формирования заказа обычно от 1 - 2 до 14 рабочих дней. Срок увеличивается, если Ваш заказ поступил в выходные дни.
+                     <span>Самостоятельный Расчет-Доставки</span>
+                     Вы всегда можете обратиться к менеджеру, он поможет Вам произвести все расчеты по доставке с учетом всех параметров.
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="modal fade" id="cardModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+               <div class="modal-content">
+                  <div class="modal-header">
+                     <h5 class="modal-title text-left" style="margin: 0" id="exampleModalLabel">Оплата</h5>
+                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                     </button>
+                  </div>
+                  <div class="modal-body" style="max-height: 800px; overflow-y: auto; padding: 0 15px">
+                     <span>Как оплатить через платежную систему интернет-эквайринг</span>
+                     Заказанный товар возможно оплатить банковской картой онлайн, после согласования заказа с менеджером (Вам придет автоматическая
+                     ссылка для оплаты). Для оплаты банковской картой, Вам нужно нажать на кнопку "Оплатить", которая будет указана в автоматическом
+                     письме от платежной системы. Страница оплаты отвечает последним международным требованиям безопасности платежных систем Visa и
+                     MasterCard. В процессе оплаты банковской картой введите ее номер, срок действия, код CVV, указанный на обороте, а также имя и
+                     фамилию владельца и контактные данные владельца карты. Убедитесь, что Вы ввели корректные данные, а затем нажмите на кнопку
+                     «Оплатить». Если ваша банковская карта поддерживает технологию 3D Secure, Вы автоматически перейдете на сайт своего банка, где
+                     Вас попросят ввести секретный код активации, который будет отправлен Вам на телефон. Если реквизиты карты введены верно и на
+                     счете достаточно денег, Вы увидите подтверждение оплаты заказа. Также Вам придет письмо с подтверждением об оплате на электронную
+                     почту.
+                     <span>Порядок возврата денежных средств</span>
+                     Для полного или частичного возврата денежных средств на карту, Вам необходимо обратиться к менеджеру интернет-магазина. Деньги
+                     автоматически вернутся на вашу карту в течение 2-3х дней. Точный срок возврата денежных средств зависит от давности размещения
+                     заказа и от банка, выпустившего карту (максимальный срок возврата не может превышать 30 дней).
+                     <span>Порядок возврата товара</span>
+                     Мебель бытовая — мебельные гарнитуры и комплекты — входит в перечень непродовольственных товаров, не подлежащих возврату или
+                     обмену на аналогичный товар другого размера, формы, габарита, расцветки или комплектации «Перечень непродовольственных товаров
+                     надлежащего качества, не подлежащих возврату или обмену на аналогичный товар других размера, формы, габарита, фасона, расцветки
+                     или комплектации» утвержден Постановлением Правительства Российской Федерации от 19 января 1998 г. N55, а также Постановлением
+                     Правительства РФ от 20.10.1998 г. № 1222, от 06.02.2002 г. № 81. Право на обмен товара надлежащего качества, предусмотренное
+                     статьей 25 Закона РФ «О защите прав потребителей» от 07.02.1992 г. № 2300–1, в соответствии с Постановлением Правительства РФ от
+                     19.01.1998 г. № 55 на мебель не распространяется. Согласно «Правилам торговли», ст. 26.1 Закона РФ от 07.02.1992 г. № 2300–1
+                     покупатель не вправе отказаться от мебели — товар, имеющего индивидуально-определенные свойства, если товар может быть
+                     использован исключительно приобретающим его потребителем, но не подошедший ему по каким-то причинам, даже не бывший в
+                     употреблении! Поэтому, выбирая мебель и совершая покупку товара, проявляйте осмотрительность в отношении размера, формы, стиля,
+                     цветовой гаммы и иных качеств мебели. Если, уже купив изделие мебели, вы вдруг нашли такой же товар, но дешевле или выяснилось,
+                     что вместо комода вам нужна была, к примеру, обувная тумба, не пытайтесь вернуть купленную вещь. И продавец, и юрист ответят вам
+                     одним и тем же: «Вы не правы, т. к. ответственность за качество мебели несет производитель продавец, а за выбор товара — только
+                     покупатель». А также, на основании «Правил торговли», Постановления Правительства РФ от 20.10.1998 г. № 1222 мебель входит в
+                     перечень товаров длительного использования, на которые не распространяются требования покупателя о безвозмездном предоставлении
+                     ему на период ремонта аналогичного товара. Мебель и Закон — не разделимы! Обработка платежной информации происходит на странице
+                     процессингового центра Сбербанка, поэтому данные карты Покупателя не доступны для интернет-магазина. Защита передачи информации
+                     производится по технологиям, разработанным международными платежными системами VISA и Master Card - Payment Card Industry Data
+                     Security Standard (PCI DSS). Использование протоколов Secure Sockets Layer (SSL), Verified by Visa, Secure Code, и закрытых
+                     банковских сетей гарантирует безопасность по сделкам с банковскими картами.
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="modal fade" id="cardModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+               <div class="modal-content">
+                  <div class="modal-header">
+                     <h5 class="modal-title text-left" style="margin: 0" id="exampleModalLabel">Рассрочка</h5>
+                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                     </button>
+                  </div>
+                  <div class="modal-body" style="max-height: 800px; overflow-y: auto; padding: 0 15px">
+                     Купите мебель в Рассрочку! Мебель в рассрочку Без справок, имея только паспорт Без похода в банк Одобрение в течении часа Сумма
+                     до 1-го миллиона рублей Возможность бесплатного досрочного погашения Мебель в рассрочку в Москве Я выбрал мебель в интернет
+                     магазине "Компас мебель" и хочу ее приобрести в рассрочку. Что делать? Позвоните менеджеру и заполните заявку на рассрочку, всего
+                     6 полей. Мебель в Москве в рассрочку Заявку заполнили. А что дальше? В течении 10 минут с Вами свяжется кредитный эксперт для
+                     уточнения паспортных данных. Затем заявка будет рассмотрена банками-партнерами. О принятом решении Вам сообщат в течении часа.
+                     Банк одобрил мою заявку. Каков план? После одобрения Вы вносите сумму первоначального взноса, согласованную с нашим магазином.
+                     Выбранная Вами мебель будет отложена до подписания с Вами договора с банком. Кредитный менеджер согласует с Вами удобное время и
+                     место для подписания платежных документов. Купить в рассрочку мебель Что теперь? Теперь Вам остается ждать поступление Вашей
+                     мебели, предъявив копию договора с банком. И получать удовольствие от Вашей новой мебели. Требование к заемщикам! Возраст от 21
+                     до 65 лет Регистрация: Российская федерация Проживание: Москва и Московская обл, Санкт-Петербург и Ленинградская обл.
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      @@include('components/reg-modal.html')
+      <header class="header">@@include('components/header.html')</header>
+      <main class="main">
+         <div class="container">
+            <div class="nav-history mob align-items-center">
+               <a href="#" class="history-item">Главная </a>
+               <p class="slash-item">/</p>
+               <a href="#" class="history-item">Каталог </a>
+               <p class="slash-item">/</p>
+               <a href="#" class="history-item">Гостинная </a>
+               <p class="slash-item">/</p>
+               <a href="#" class="history-item now">Гостинная Marlana</a>
+            </div>
+            <div class="row">
+               <div class="col-md-3">@@include('components/navMenu.html')</div>
+               <div class="col-md-13">
+                  <div class="card-content">
+                     <div class="d-flex align-item-start justify-content-between">
+                        <div style="width: 100%">
+                           <div>
+                              <div class="main-search__block">
+                                 <input type="text" class="search__block-input" placeholder="Поиск" />
+                              </div>
+                              <div class="nav-history d-flex align-items-center">
+                                 <a href="#" class="history-item">Главная </a>
+                                 <p class="slash-item">/</p>
+                                 <a href="#" class="history-item">Каталог </a>
+                                 <p class="slash-item">/</p>
+                                 <a href="#" class="history-item">Гостинная </a>
+                                 <p class="slash-item">/</p>
+                                 <a href="#" class="history-item now">Гостинная Marlana</a>
+                              </div>
+                              @@include('components/cardMainInfo.html')
+                           </div>
+                           @@include('components/tabsMenu.html')
+                        </div>
+                     </div>
+                     @@include('components/watched.html') @@include('components/fullCollection.html') @@include('components/pagination.html')
+                  </div>
+               </div>
+            </div>
+         </div>
+      </main>
+      @@include('components/footer.html')
+      <script
+         src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+         crossorigin="anonymous"
+      ></script>
+      <script
+         src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+         integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+         crossorigin="anonymous"
+      ></script>
+      <script
+         src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+         crossorigin="anonymous"
+      ></script>
+      <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+      <script>
+         function openCity(evt, cityName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+               tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+               tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(cityName).style.display = "block";
+            evt.currentTarget.className += " active";
+         }
+      </script>
+      <script>
+         document.querySelector(".mob-menuBtn").addEventListener("click", () => {
+            document.querySelector(".hamburger-menu").classList.add("show");
+            document.body.style.height = "100vh";
+         });
+         document.querySelector(".close-bg").addEventListener("click", () => {
+            document.querySelector(".hamburger-menu").classList.remove("show");
+            document.body.style.height = "auto";
+         });
+      </script>
+      <script>
+         window.onload = function () {
+            document.querySelector("#preloader").style.display = "none";
+         };
+      </script>
+      <script src="js/app.min.js"></script>
+   </body>
+</html>

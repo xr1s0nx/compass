@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+         href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,600&display=swap"
+         rel="stylesheet"
+      />
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+      <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css" />
+      <link rel="stylesheet" href="css/style.min.css" />
+      <title>Компасс</title>
+   </head>
+   <body>
+      @@include('components/tel-modal.html') @@include('components/reg-modal.html')
+      <header class="header">@@include('components/header.html')</header>
+      <main class="main" style="margin-top: 30px">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-3">@@include('components/navMenu.html')</div>
+               <div class="col-md-13">
+                  <div class="nav-history d-flex align-items-center" style="margin-top: 0; margin-bottom: 10px">
+                     <a href="#" class="history-item">Главная </a>
+                     <p class="slash-item">/</p>
+                     <a href="#" class="history-item now">Корзина </a>
+                  </div>
+                  <div class="d-flex justify-content-between align-items-end mb-3">
+                     <h1 class="title text-left mb-0">Корзина</h1>
+                     <button class="resetBasket d-flex align-items-center">
+                        <svg
+                           xmlns="http://www.w3.org/2000/svg"
+                           width="16"
+                           height="16"
+                           fill="red"
+                           class="bi bi-x-lg"
+                           viewBox="0 0 16 16"
+                           style="margin-right: 10px"
+                        >
+                           <path
+                              d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"
+                           />
+                        </svg>
+                        Очистить корзину
+                     </button>
+                  </div>
+                  <div style="overflow-x: auto">
+                     <div class="cart-table" style="width: 1532px">
+                        <div class="d-flex justify-content-between align-items-center table-title-row">
+                           <div class="cart-table__colOne">ID</div>
+                           <div class="cart-table__colTwo">Фото</div>
+                           <div class="cart-table__colThree">Описание</div>
+                           <div class="cart-table__colFour">Количество</div>
+                           <div class="cart-table__colFive">Цена</div>
+                           <div class="cart-table__colSix">Скидка</div>
+                           <div class="cart-table__colSeven">Со скидкой</div>
+                           <div class="cart-table__colEight">Итого</div>
+                           <div class="cart-table__colNine">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#fff" class="bi bi-trash" viewBox="0 0 16 16">
+                                 <path
+                                    d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"
+                                 />
+                                 <path
+                                    fill-rule="evenodd"
+                                    d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"
+                                 />
+                              </svg>
+                           </div>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-between table-body-row">
+                           <div class="cart-table__colOne">8</div>
+                           <div class="cart-table__colTwo">
+                              <a href="">
+                                 <img src="img/cardGalleryImg.png" alt="" />
+                              </a>
+                           </div>
+                           <div class="cart-table__colThree">
+                              <div class="d-block text-left">
+                                 <span class="d-block">Гостинная Mariana</span>
+                                 <p>Обеденная группа Мариана (Mariana) от фабрики Беллона. В стоимость входит: Витрина 1дв...</p>
+                              </div>
+                           </div>
+                           <div class="cart-table__colFour">
+                              <div class="counter d-flex align-items-center justify-content-between">
+                                 <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="16"
+                                    height="16"
+                                    fill="currentColor"
+                                    class="bi bi-dash"
+                                    viewBox="0 0 16 16"
+                                    data-func="minus"
+                                 >
+                                    <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z" />
+                                 </svg>
+                                 <p class="table-count">1</p>
+                                 <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="16"
+                                    height="16"
+                                    fill="currentColor"
+                                    class="bi bi-plus"
+                                    data-func="plus"
+                                    viewBox="0 0 16 16"
+                                 >
+                                    <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
+                                 </svg>
+                              </div>
+                           </div>
+                           <div class="cart-table__colFive">154 200 р.</div>
+                           <div class="cart-table__colSix">39 500</div>
+                           <div class="cart-table__colSeven">114 700 р.</div>
+                           <div class="cart-table__colEight">114 700 р.</div>
+                           <div class="cart-table__colNine">
+                              <svg
+                                 xmlns="http://www.w3.org/2000/svg"
+                                 style="transform: rotate(45deg)"
+                                 width="16"
+                                 height="16"
+                                 fill="red"
+                                 class="bi bi-plus-circle"
+                                 viewBox="0 0 16 16"
+                              >
+                                 <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                                 <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
+                              </svg>
+                           </div>
+                        </div>
+                        <div class="table-footer d-flex align-items-center justify-content-end">Итого: <span>114 700 р.</span></div>
+                     </div>
+                  </div>
+
+                  <div class="btns-table d-flex align-item-center justify-content-end">
+                     <button class="btn _button">Оформить заказ</button>
+                     <button class="btn _button" data-toggle="modal" data-target="#exampleModalLabelTel">Быстрый заказ</button>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </main>
+      @@include('components/footer.html')
+      <script
+         src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+         crossorigin="anonymous"
+      ></script>
+      <script
+         src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+         integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+         crossorigin="anonymous"
+      ></script>
+      <script
+         src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+         crossorigin="anonymous"
+      ></script>
+      <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+      <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+      <script>
+         document.querySelector(".mob-menuBtn").addEventListener("click", () => {
+            document.querySelector(".hamburger-menu").classList.add("show");
+            document.body.style.height = "100vh";
+         });
+         document.querySelector(".close-bg").addEventListener("click", () => {
+            document.querySelector(".hamburger-menu").classList.remove("show");
+            document.body.style.height = "auto";
+         });
+      </script>
+      <script>
+         const funcBtns = document.querySelectorAll(".bi");
+         const count = document.querySelector(".table-count");
+         funcBtns.forEach((item) => {
+            item.addEventListener("click", (e) => {
+               const nowCount = +count.innerHTML;
+               if (e.currentTarget.dataset.func === "plus") {
+                  count.innerHTML = nowCount + 1;
+               } else if (nowCount > 0) {
+                  count.innerHTML = nowCount - 1;
+               }
+
+               // console.log(parseInt(count.innerHTML))
+            });
+         });
+      </script>
+      <script>
+         window.onload = function () {
+            document.querySelector("#preloader").style.display = "none";
+         };
+      </script>
+   </body>
+</html>

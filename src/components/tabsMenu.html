@@ -1,0 +1,82 @@
+<div class="tabs-block">
+   <div class="tab">
+      <button class="tablinks" onclick="openCity(event, 'Description')">Описание</button>
+      <button class="tablinks" onclick="openCity(event, 'Proprities')">Характеристики</button>
+      <button class="tablinks active" onclick="openCity(event, 'Reviews')">Отзывы</button>
+   </div>
+   <div id="Description" class="tabcontent" >
+      <h3>Description</h3>
+      <p>London is the capital city of England.</p>
+   </div>
+   <div id="Proprities" class="tabcontent">
+      <h3>Proprities</h3>
+      <p>Paris is the capital of France.</p>
+   </div>
+   <div id="Reviews" class="tabcontent active" style="display: block">
+      <p class="tabcontent-title">Оставить коментарий</з>
+      <div class="d-flex align-items-center justify-content-between">
+         <div class="input-block">
+            <p class="block-title">Имя <span>*</span></p>
+            <input type="text" />
+         </div>
+         <div class="input-block">
+            <p class="block-title">Email <span>*</span></p>
+            <input type="email" />
+         </div>
+         <div class="input-block">
+            <p class="block-title">Оценка</p>
+            <input type="text" />
+         </div>
+      </div>
+      <div class="review-body">
+        <p class="block-title">Отзыв <span>*</span></p>
+        <textarea class="review-area"></textarea>
+      </div>
+      <button class="btn _button send-review">Опубликовать</button>
+   </div>
+</div>
+<div class="tabs-block mob">
+    <div class="tab">
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Отзывы
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <button class="tablinks" onclick="openCity(event, 'Description1')">Описание</button>
+                <button class="tablinks" onclick="openCity(event, 'Proprities1')">Характеристики</button>
+                <button class="tablinks" onclick="openCity(event, 'Reviews1')">Отзывы</button>
+            </div>
+          </div>
+       
+    </div>
+    <div id="Description1" class="tabcontent" >
+       <h3>Description</h3>
+       <p>London is the capital city of England.</p>
+    </div>
+    <div id="Proprities1" class="tabcontent">
+       <h3>Proprities</h3>
+       <p>Paris is the capital of France.</p>
+    </div>
+    <div id="Reviews1" class="tabcontent active" style="display: block">
+       <p class="tabcontent-title">Оставить коментарий</з>
+       <div class="d-flex align-items-center justify-content-between tabsContent">
+          <div class="input-block">
+             <p class="block-title">Имя <span>*</span></p>
+             <input type="text" />
+          </div>
+          <div class="input-block">
+             <p class="block-title">Email <span>*</span></p>
+             <input type="email" />
+          </div>
+          <div class="input-block">
+             <p class="block-title">Оценка</p>
+             <input type="text" />
+          </div>
+       </div>
+       <div class="review-body">
+         <p class="block-title">Отзыв <span>*</span></p>
+         <textarea class="review-area"></textarea>
+       </div>
+       <button class="btn _button send-review">Опубликовать</button>
+    </div>
+ </div>

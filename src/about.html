@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+         href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,600&display=swap"
+         rel="stylesheet"
+      />
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+      <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css" />
+      <link rel="stylesheet" href="css/style.min.css" />
+      <title>Компасс</title>
+   </head>
+   <body>
+      @@include('components/tel-modal.html') @@include('components/preloader.html') @@include('components/reg-modal.html')
+      <header class="header">@@include('components/header.html')</header>
+      <main class="main" style="margin-top: 30px">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-3">@@include('components/navMenu.html')</div>
+               <div class="col-md-13">
+                  <div class="about__block about__block-aboutPage">
+                     <div class="nav-history d-flex align-items-center" style="margin-top: 0; margin-bottom: 30px">
+                        <a href="#" class="history-item">Главная </a>
+                        <p class="slash-item">/</p>
+                        <a href="#" class="history-item now">О компании</a>
+                     </div>
+                     <p class="about__block-title title">О компании</p>
+                     <div class="about__block-content d-flex align-items-start justify-content-between">
+                        <p class="content__text content__text-aboutPage">
+                           <span>
+                              Компания «Компасмебель» успешно работает на мебельном рынке с 2000 года. За этот период мы добились существенных
+                              достижений: компания входит в число лидеров и предлагает Вам более 100 000 наименований товаров пр-ва крупнейших
+                              Российских и зарубежных мебельных фабрик.
+                           </span>
+
+                           <span>
+                              Масштабы закупок, оптимизация транспортировки, обработки товара и современный менеджмент позволяют постоянно наращивать
+                              объёмы нашей деятельности.</span
+                           >
+
+                           <span
+                              >Компания «Компасмебель» предоставляет Клиентам максимально выгодные условия сотрудничества и высокое качество
+                              обслуживания.</span
+                           >
+
+                           <span
+                              >Создавая сайт, мы хотели дать Вам возможность воспользоваться современным, мощным инструментом. Он позволит Вам не
+                              выходя из дома или офиса оперативно знакомиться с нашим товаром, оформлять заказы, получать информацию о новинках и
+                              ценах. Всё это делается для того, чтобы Вы экономили своё время и деньги.</span
+                           >
+                        </p>
+                        <img src="img/aboutPageImg.png" alt="" class="content__img content__img-aboutPage" />
+                     </div>
+                     <p class="about__block-text">Наши менеджеры всегда готовы помочь Вам в выборе мебели для Вашего дома!</p>
+                     <p class="about__block-text">Звоните нам по телефону: <span>7 (495) 477-81-90</span></p>
+                     <p class="about__block-text">В наших магазинах Вы сможете посмотреть и купить мебель следующих фабрик:</p>
+                     <div class="d-flex our-shops align-items-center justify-content-between">
+                        <ul class="shops-col d-block">
+                           <li>Bellona (Белона) Турция</li>
+                           <li>CompassMebel (Компас Мебель)</li>
+                           <li>DreamLine (ДримЛайн) Россия</li>
+                           <li>Актуальный дизайн</li>
+                        </ul>
+                        <ul class="shops-col d-block">
+                           <li>Bellona (Белона) Турция</li>
+                           <li>CompassMebel (Компас Мебель)</li>
+                           <li>DreamLine (ДримЛайн) Россия</li>
+                           <li>Актуальный дизайн</li>
+                        </ul>
+                        <ul class="shops-col d-block">
+                           <li>Bellona (Белона) Турция</li>
+                           <li>CompassMebel (Компас Мебель)</li>
+                           <li>DreamLine (ДримЛайн) Россия</li>
+                           <li>Актуальный дизайн</li>
+                        </ul>
+                        <ul class="shops-col d-block">
+                           <li>Bellona (Белона) Турция</li>
+                           <li>CompassMebel (Компас Мебель)</li>
+                           <li>DreamLine (ДримЛайн) Россия</li>
+                           <li>Актуальный дизайн</li>
+                        </ul>
+                     </div>
+                     @@include('components/map.html')
+                  </div>
+               </div>
+            </div>
+         </div>
+      </main>
+      @@include('components/footer.html')
+      <script
+         src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+         crossorigin="anonymous"
+      ></script>
+      <script
+         src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+         integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+         crossorigin="anonymous"
+      ></script>
+      <script
+         src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+         crossorigin="anonymous"
+      ></script>
+      <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+      <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+      <script>
+         window.onload = function () {
+            document.querySelector("#preloader").style.display = "none";
+         };
+      </script>
+   </body>
+</html>

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+         href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,600&display=swap"
+         rel="stylesheet"
+      />
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+      <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css" />
+      <link rel="stylesheet" href="css/style.min.css" />
+      <title>Компасс</title>
+   </head>
+   <body>
+      @@include('components/tel-modal.html') @@include('components/preloader.html') @@include('components/reg-modal.html')
+      <header class="header">@@include('components/header.html')</header>
+      <main class="main" style="margin-top: 30px">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-3">@@include('components/navMenu.html')</div>
+               <div class="col-md-13">
+                  <div class="nav-history d-flex align-items-center" style="margin-top: 0; margin-bottom: 30px">
+                     <a href="#" class="history-item">Главная </a>
+                     <p class="slash-item">/</p>
+                     <a href="#" class="history-item">Каталог </a>
+                     <p class="slash-item">/</p>
+                     <a href="#" class="history-item now">Гостинная </a>
+                  </div>
+                  <div class="d-flex align-items-center flex-wrap">
+                     <div class="nowFilter d-flex flex-wrap"></div>
+                     <div class="resetFilter align-item-center" style="display: none">
+                        Сбросить фильтр
+                        <svg
+                           xmlns="http://www.w3.org/2000/svg"
+                           style="margin-left: 5px"
+                           fill="currentColor"
+                           class="bi bi-trash3"
+                           width="22"
+                           height="22"
+                           viewBox="0 0 16 16"
+                        >
+                           <path
+                              d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5ZM11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H2.506a.58.58 0 0 0-.01 0H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1h-.995a.59.59 0 0 0-.01 0H11Zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5h9.916Zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47ZM8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5Z"
+                           />
+                        </svg>
+                     </div>
+                  </div>
+                  @@include('components/catalogFilter.html') @@include('components/catalogSort.html') @@include('components/catalogItems.html')
+                  @@include('components/pagination.html')
+               </div>
+            </div>
+         </div>
+      </main>
+      @@include('components/footer.html')
+      <script
+         src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+         crossorigin="anonymous"
+      ></script>
+      <script
+         src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+         integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+         crossorigin="anonymous"
+      ></script>
+      <script
+         src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+         crossorigin="anonymous"
+      ></script>
+      <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+      <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+      <script>
+         window.onload = function () {
+            document.querySelector("#preloader").style.display = "none";
+         };
+      </script>
+      <script>
+         document.querySelector(".mob-menuBtn").addEventListener("click", () => {
+            document.querySelector(".hamburger-menu").classList.add("show");
+            document.body.style.height = "100vh";
+         });
+         document.querySelector(".close-bg").addEventListener("click", () => {
+            document.querySelector(".hamburger-menu").classList.remove("show");
+            document.body.style.height = "auto";
+         });
+      </script>
+      <script>
+         const values = [50000, 250000];
+         const sliderInit = () => {
+            $("#slider-range").slider({
+               range: true,
+               min: 0,
+               max: 300000,
+               values: values,
+               slide: (change = (event, ui) => {
+                  $("#amount1").val(ui.values[0]);
+                  $("#amount2").val(ui.values[1]);
+               }),
+            });
+         };
+         document.querySelector("#amount1").addEventListener("change", (e) => {
+            values[0] = e.target.value;
+            sliderInit();
+         });
+         document.querySelector("#amount2").addEventListener("change", (e) => {
+            values[1] = e.target.value;
+            sliderInit();
+         });
+         sliderInit();
+      </script>
+      <script>
+         let selectFiltersRadio = [];
+         const allFilterCheck = document.querySelectorAll(".containerCheck");
+         let selectFiltersCheck = [];
+         const resetFilter = document.querySelector(".resetFilter");
+         const selectFilterObj = document.querySelector(".nowFilter");
+         const renderFilters = () => {
+            selectFilterObj.innerHTML = "";
+            if (selectFiltersRadio[0]) {
+               const filterRadio = document.createElement("div");
+               filterRadio.className = "filter-radio d-flex align-items-center";
+               filterRadio.innerHTML = `<p>${selectFiltersRadio[0]}</p><button data-value='${selectFiltersRadio[0]}' class="removeFilterRadioBtn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-circle" viewBox="0 0 16 16">
+  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+  <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+</svg>
+                </button>`;
+               filterRadio.onclick = (e) => {
+                  removeFilterRadio(e);
+               };
+               selectFilterObj.insertAdjacentElement("afterbegin", filterRadio);
+            }
+
+            selectFiltersCheck.map((item) => {
+               const filterCheck = document.createElement("div");
+               filterCheck.className = "filter-check d-flex align-items-center";
+               filterCheck.innerHTML = `<p>${item}</p><button data-value="${item}" class="removeFilterCheckBtn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-circle" viewBox="0 0 16 16">
+  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+  <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+</svg>
+                </button>`;
+               filterCheck.onclick = (e) => {
+                  removeFilterCheck(e);
+               };
+               selectFilterObj.insertAdjacentElement("afterbegin", filterCheck);
+            });
+            if (selectFiltersRadio.length === 0 && selectFiltersCheck.length === 0) {
+               resetFilter.style.display = "none";
+            }
+         };
+
+         const removeFilterRadio = (e) => {
+            selectFiltersRadio = selectFiltersRadio.filter((item) => {
+               if (item !== e.target.parentElement.dataset.value) {
+                  return item;
+               }
+            });
+            console.log(selectFiltersRadio);
+            document.querySelectorAll(".radio-input input").forEach((item) => {
+               item.checked = "";
+            });
+            renderFilters();
+         };
+
+         const removeFilterCheck = (e) => {
+            selectFiltersCheck = selectFiltersCheck.filter((item) => {
+               document.querySelectorAll(".containerCheck input").forEach((check) => {
+                  if (check.parentElement.dataset.value === item) {
+                     check.checked = "";
+                  }
+               });
+               if (item !== e.target.parentElement.dataset.value) {
+                  return item;
+               }
+            });
+            renderFilters();
+         };
+
+         const addFilterRadio = (e) => {
+            selectFiltersRadio[0] = document.querySelector(`#${e.target.dataset.value}`).value;
+            resetFilter.style.display = "flex";
+            renderFilters();
+         };
+
+         const addFilterCheckbox = (e) => {
+            selectFiltersCheck = [];
+            document.querySelectorAll(".containerCheck input").forEach((item) => {
+               console.log(item.checked);
+               if (item.checked === true) {
+                  selectFiltersCheck.push(item.parentElement.dataset.value);
+               }
+            });
+            resetFilter.style.display = "flex";
+            renderFilters();
+         };
+         allFilterCheck.forEach((item) => {
+            item.addEventListener("click", (e) => addFilterCheckbox(e));
+         });
+
+         const allFilterBtns = document.querySelectorAll(".form-radio-label");
+         allFilterBtns.forEach((item) => {
+            item.addEventListener("click", (e) => addFilterRadio(e));
+         });
+         resetFilter.addEventListener("click", () => {
+            selectFiltersRadio = [];
+            selectFiltersCheck = [];
+            console.log(selectFiltersRadio);
+            document.querySelectorAll(".containerCheck input").forEach((item) => {
+               item.checked = "";
+            });
+            document.querySelectorAll(".radio-input input").forEach((item) => {
+               item.checked = "";
+            });
+            document.querySelector(".nowFilter").innerHTML = "";
+            resetFilter.style.display = "none";
+         });
+         const dropdowns = document.querySelectorAll(".dropdown .dropdown-menu");
+         dropdowns.forEach((item) => {
+            item.addEventListener("click", (e) => {
+               item.classList.add("show");
+               item.parentElement.classList.add("show");
+            });
+         });
+      </script>
+   </body>
+</html>
